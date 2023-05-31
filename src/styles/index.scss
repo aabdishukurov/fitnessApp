@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap');
 @import './components/all';
+@import './variables.scss';
 
 * {
   margin: 0;
@@ -7,4 +8,5 @@
 }
 body {
   font-family: 'Raleway', sans-serif;
+  background: $brand-primary;
 }
