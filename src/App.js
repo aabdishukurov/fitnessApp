@@ -3,6 +3,7 @@ import { Provider } from 'react-redux';
 import { store } from './store';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { Categories } from './components';
+import PremiumPage from './pages/PremiumPage';
 
 function App() {
   return (
@@ -10,9 +11,7 @@ function App() {
       <Provider store={store}>
         <Categories />
         <Routes>
-          <Route path='/' element={<div></div>}>
-            {/*  */}
-          </Route>
+          <Route path={'/premium'} element={<PremiumPage/>}/>
         </Routes>
       </Provider>
     </BrowserRouter>
