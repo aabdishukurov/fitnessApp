@@ -1,6 +1,6 @@
-import PremiumSlider from "../components/ivan/premiumSlider/PremiumSlider";
+import PremiumSlider from '../components/ivan/premiumSlider/PremiumSlider';
 
-import ForMeditationPng from "../assets/for-meditation.png";
+import ForMeditationPng from '../assets/premiumPage/meditation.jpg';
 
 function PremiumPage() {
   return (
@@ -22,8 +22,8 @@ function PremiumPage() {
                   средств.
                 </li>
                 <li class="banner__item">
-                  Оформляя подписку вы разрешаете ежемесячно взимать с вашей карты
-                  стоимость подписки
+                  Оформляя подписку вы разрешаете ежемесячно взимать с вашей
+                  карты стоимость подписки
                 </li>
                 <li class="banner__item">
                   Подписку можно отменить в любой момент
@@ -41,8 +41,8 @@ function PremiumPage() {
                   средств.
                 </li>
                 <li class="banner__item">
-                  Оформляя подписку вы разрешаете ежемесячно взимать с вашей карты
-                  стоимость подписки
+                  Оформляя подписку вы разрешаете ежемесячно взимать с вашей
+                  карты стоимость подписки
                 </li>
                 <li class="banner__item">
                   Подписку можно отменить в любой момент
@@ -56,8 +56,7 @@ function PremiumPage() {
       <div class="includes">
         <div class="container">
           <h3 class="includes__title title">
-            Что входит в
-            <span class="title__premium"> Premium?</span>
+            Что входит в<span class="title__premium"> Premium?</span>
           </h3>
           <div class="includes__content">
             <h4 class="includes__subtitle">Больше категорий</h4>
