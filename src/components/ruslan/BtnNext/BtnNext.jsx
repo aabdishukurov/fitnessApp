@@ -1,12 +1,13 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
-const BtnNext = ({ title, handleClick }) => {
+const BtnNext = ({ title, to }) => {
   return (
     <>
       <div>
-        <button className="form-register__btn-next" onClick={handleClick}>
+        <Link to={to} className="form__btn-next">
           {title}
-        </button>
+        </Link>
       </div>
     </>
   );
