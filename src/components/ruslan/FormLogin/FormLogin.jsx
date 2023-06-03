@@ -3,7 +3,9 @@ import { useDispatch, useSelector } from "react-redux";
 import { loginUser } from "../../../store/slices/ruslan/authSlice";
 import BtnHide from "../BtnHide/BtnHide";
 import BtnClose from "../BtnClose/BtnClose";
-
+import { GoogleLogin } from "react-google-login";
+import { CLIENT_ID } from "../../../config";
+import GoogleAuth from "../GoogleAuth/GoogleAuth";
 function LoginForm() {
   const dispatch = useDispatch();
   const isLoading = useSelector((state) => state.auth.isLoading);
@@ -36,7 +38,7 @@ function LoginForm() {
             type="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            placeholder={error ? <p>{error}</p> : "Email"}
+            placeholder={!error ? <p>{error}</p> : "Email"}
             required
           />
         </div>
@@ -58,7 +60,9 @@ function LoginForm() {
             Войти
           </button>
         )}
-        {/* {error && <p>{error}</p>} */}
+        {/* <GoogleAuthButton />
+         */}
+        <GoogleAuth />
       </form>
     </div>
   );

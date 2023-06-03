@@ -6,7 +6,7 @@ import { gapi } from "gapi-script";
 import BtnNext from "../BtnNext";
 import BtnHide from "../BtnHide";
 import BtnClose from "../BtnClose";
-import GoogleAuthButton from "../GoogleAuthButton/GoogleAuthButton/GoogleAuthButton";
+import GoogleAuthButton from "../GoogleAuthButton";
 import { useEffect } from "react";
 import { CLIENT_ID } from "../../../config";
 import GoogleLogOut from "../GoogleLogOut/GoogleLogOut";
@@ -58,24 +58,14 @@ const FormRegister = ({ handleClick }) => {
     if (validateForm()) {
       const userData = {
         email,
+        userName,
         password,
       };
 
       dispatch(registerUser(userData));
-      !errors.email && !errors.password && navigate("/login");
+      !errors.email && navigate("/login");
     }
   };
-
-  // useEffect(() => {
-  //   function start() {
-  //     gapi.client.init({
-  //       clientId: CLIENT_ID,
-  //       scope: "",
-  //     });
-  //   }
-
-  //   gapi.load("client-auth2", start);
-  // }, []);
 
   // const accessToken = gapi.auth.getToken().access_token;
 
@@ -122,7 +112,7 @@ const FormRegister = ({ handleClick }) => {
         </div>
         <div className="form__wrapper">
           <input
-            type={isType ? "password" : "text"}
+            type={type ? "password" : "text"}
             value={repass}
             onChange={(e) => {
               setRepass(e.target.value);
