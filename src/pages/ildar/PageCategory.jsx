@@ -1,13 +1,12 @@
 import React from 'react';
-import { Button } from './button/Button';
 // images
-import Man from '../../../assets/categories/man.png';
-import Back from '../../../assets/categories/back.png';
-import Hand from '../../../assets/categories/hand.png';
-import Leg from '../../../assets/categories/leg.png';
-import Eye from '../../../assets/categories/eye.png';
-import Timer from '../../../assets/categories/timer.png';
-import { Link } from 'react-router-dom';
+import Man from '../../assets/categories/man.png';
+import Back from '../../assets/categories/back.png';
+import Hand from '../../assets/categories/hand.png';
+import Leg from '../../assets/categories/leg.png';
+import Eye from '../../assets/categories/eye.png';
+import Timer from '../../assets/categories/timer.png';
+import { Category } from '../../components/ildar/categories/Category';
 
 const warmUps = [
   {
@@ -67,44 +66,23 @@ const warmUps = [
   },
 ];
 
-export const Categories = () => {
+export const PageCategory = () => {
   return (
-    <div className="categories">
+    <>
       {warmUps.map((warmup) => (
-        <div className={warmup.className} key={warmup.id}>
-          <div className="categories__image-side">
-            <img src={warmup.image} alt={warmup.alt} />
-          </div>
-          <div className="categories__text-side">
-            <div className="text-side__name">
-              <h3>{warmup.name}</h3>
-              <img src={Timer} alt="timer" />
-              <p>{warmup.time}</p>
-            </div>
-            <div className="categories__pros-side">
-              <div>
-                <div>
-                  <span></span>
-                </div>
-                <p>{warmup.pros}</p>
-              </div>
-              <div>
-                <div>
-                  <span></span>
-                </div>
-                <p>{warmup.pros2}</p>
-              </div>
-              <div>
-                <div></div>
-                <p>{warmup.pros3}</p>
-              </div>
-            </div>
-            <Link>
-              <Button />
-            </Link>
-          </div>
-        </div>
+        <Category
+          key={warmup.id}
+          className={warmup.className}
+          categoryImage={warmup.image}
+          timerImage={Timer}
+          alt={warmup.alt}
+          name={warmup.name}
+          pros={warmup.pros}
+          pros2={warmup.pros2}
+          pros3={warmup.pros3}
+          time={warmup.time}
+        />
       ))}
-    </div>
+    </>
   );
 };

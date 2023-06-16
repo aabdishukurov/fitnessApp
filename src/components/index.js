@@ -1,3 +1,2 @@
-import { Categories } from "./ildar/categories/Categories";
-
-export { Categories }
+import { Category } from "./ildar/categories/Category";
+export { Category }
