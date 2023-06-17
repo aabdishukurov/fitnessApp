@@ -1,3 +1,4 @@
+import style from './pro.module.scss'
 import { Card } from "../Card/Card";
 
 const cards = [
@@ -43,36 +44,36 @@ const cards = [
 
 export const Pro = () => {
   return (
-    <section className="pro">
-      <div className="container">
-        <div className="pro__content">
-          <div className="pro__logo logo">
-            <span className="logo__name">FitBreak</span>
-            <div className="logo__pro">
-              <i className="logo__icon" />
+    <section className={style.pro}>
+      <div className={style.container}>
+        <div className={style.pro__content}>
+          <div className={`${style.pro__logo} ${style.logo}`}>
+            <span className={style.logo__name}>FitBreak</span>
+            <div className={style.logo__pro}>
+              <i className={style.logo__icon} />
               PRO
             </div>
           </div>
-          <div className="pro__text">
-            <p className="pro__paragraph">
-              <span className="pro__accent">
+          <div className={style.pro__text}>
+            <p className={style.pro__paragraph}>
+              <span className={style.pro__accent}>
                 FitBreak <span>PRO</span>
               </span>
               - это отличный инструмент, который позволит Вам персонализировать
               Ваши данные, отслеживать статистику проделанных упражнений, за
               которые Высможете получать Ранги уровней Вашей активности.
             </p>
-            <p className="pro__paragraph">
+            <p className={style.pro__paragraph}>
               Активируйте дополнительные опции и настройте уведомления
               персонализированно!
             </p>
-            <p className="pro__paragraph">
+            <p className={style.pro__paragraph}>
               В полном комплексе Вы станете на десять шагов ближе к Вашей цели!
             </p>
           </div>
-          <ul className="pro__cards">
+          <ul className={style.pro__cards}>
             {cards.map((card) => (
-              <Card info={card} key={card.id} />
+              <Card info={card} key={card.id} className={style.pro__card}/>
             ))}
           </ul>
         </div>

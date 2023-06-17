@@ -1,18 +1,20 @@
-export const Card = ({ info }) => {
+import style from './card.module.scss'
+
+export const Card = ({ info, className }) => {
   return (
-    <li className="pro__card card">
-      <div className="card__title">
+    <li className={`${className} ${style.card} `}>
+      <div className={style.card__title}>
         <b>FitBreak</b> {info.title}
       </div>
-      <ul className="card__list">
+      <ul className={style.card__list}>
         {info.props.map((prop) => (
-          <li className="card__item" key={prop}>
+          <li className={style.card__item} key={prop}>
             {prop}
           </li>
         ))}
       </ul>
-      <button className="card__button">
-        <span className="card__clipped-text">Купить: {info.price}</span>
+      <button className={style.card__button}>
+        <span className={style.card__clipped_text}>Купить: {info.price}</span>
       </button>
     </li>
   );
