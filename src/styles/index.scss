@@ -1,8 +1,7 @@
 @import "./libs/variables.scss";
 @import "./libs/reset.scss";
 
-@import "./components/ruslan/form.scss";
-@import "./components/ruslan/signed.scss";
-@import "./components/ruslan/success.scss";
-
-@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap");
+@import "./components/form.scss";
+@import "./components/login-page.scss";
+@import "./components/form-login.scss";
+@import "./components/registerPage.scss";

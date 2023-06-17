@@ -1,0 +1,16 @@
+.login-page {
+  background: linear-gradient(
+    90deg,
+    #9747ff 2.94%,
+    #8e4cfe 2.95%,
+    rgba(255, 255, 255, 0.34) 53.22%,
+    #019cf4 105.65%
+  );
+  height: 100vh;
+  &__img {
+    display: block;
+    margin: 0 auto;
+    height: 80px;
+    width: 100%;
+  }
+}

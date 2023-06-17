@@ -1,8 +1,9 @@
 * {
   box-sizing: border-box;
 }
+html,
 body {
-  background-color: $primary-color;
+  margin: 0;
 }
 h1,
 h2,
@@ -17,4 +18,10 @@ ol {
 }
 a {
   text-decoration: none;
+}
+p {
+  margin: 0;
+}
+input {
+  outline: none;
 }

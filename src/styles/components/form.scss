@@ -1,0 +1,202 @@
+.form {
+  display: flex;
+  justify-content: center;
+  gap: 58px;
+  margin: 0 auto;
+  width: 830px;
+  padding: 26px 10px;
+  border-radius: 20px;
+  background: #ffffff;
+  &__logo {
+    display: block;
+    width: 140px;
+    height: 56px;
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    // height: 100%;
+  }
+  &__yoga {
+    width: 320px;
+  }
+  &__title {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 37px;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 10px;
+    color: $secondary-color;
+  }
+  &__subtitle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 15px;
+    color: $secondary-color;
+  }
+  &__label {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    justify-content: center;
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    color: $secondary-color;
+    span {
+      position: absolute;
+      top: 55px;
+      z-index: 10;
+      font-family: "Montserrat";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 15px;
+      color: #e70101;
+    }
+  }
+  &__input {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    width: 366px;
+    border: none;
+    padding-bottom: 4px;
+    padding-right: 40px;
+    color: #7d7d7d;
+    border-bottom: 1px solid $secondary-color;
+  }
+  &__label-input {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    margin-bottom: 12px;
+    color: $secondary-color;
+  }
+  &__input-names {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    border: none;
+    padding-bottom: 4px;
+    width: 165px;
+    border: none;
+    border-right: 1px solid $secondary-color;
+    border-bottom: 1px solid $secondary-color;
+    color: #7d7d7d;
+  }
+  &__wrapper {
+    position: relative;
+  }
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+  }
+
+  &__wrapper-btns {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    // gap: 40px;
+  }
+  &__wrapper-logos {
+    display: flex;
+    justify-content: space-between;
+    height: 538px;
+    padding: 40px 0;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__btn-eye {
+    position: absolute;
+    left: 85%;
+    top: 15px;
+    width: 40px;
+    height: 40px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    img {
+      width: 20px;
+    }
+  }
+  &__btn-register {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    padding: 10px 15px;
+    // width: 256px;
+    // height: 48px;
+    text-align: center;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    color: #ffffff;
+    background: linear-gradient(180deg, #b389ea 0%, #016ae8 100%);
+  }
+  &__btn-enter {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    padding: 10px;
+    // width: 118px;
+    // height: 48px;
+    border-radius: 20px;
+
+    border: 2px solid $secondary-color;
+    background: #ffffff;
+    color: $secondary-color;
+  }
+  &__btn-auth {
+    display: flex;
+    align-items: center;
+    border-radius: 20px;
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    padding: 6px 12px;
+    margin: 0 auto;
+    margin-top: 10px;
+    cursor: pointer;
+    border: 1px solid $secondary-color;
+    color: $secondary-color;
+    background: #ffffff;
+  }
+  &__line {
+    display: block;
+    width: 140px;
+    height: 2px;
+    background-color: $secondary-color;
+  }
+}
