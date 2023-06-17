@@ -1,2 +1,4 @@
 import { Category } from "./ildar/categories/Category";
-export { Category }
+import { Pro } from "./ivan/Pro/Pro";
+
+export { Category, Pro}
