@@ -1,8 +1,9 @@
 import React from 'react';
+import styles from '../categories.module.scss';
 
 export const Button = () => {
   return (
-    <button className="categories__link">
+    <button className={styles.categories__link}>
       <div>
         <svg
           width="15"

@@ -1,3 +1,3 @@
-import { PageCategory } from "./ildar/PageCategory"
+import { PageCategory } from "./PageCategory"
 
 export {PageCategory}

@@ -1,19 +1,20 @@
 import React from 'react';
+import styles from '../components/categories/categories.module.scss';
+import { Category } from '../components/categories/Category';
 // images
-import Man from '../../assets/categories/man.png';
-import Back from '../../assets/categories/back.png';
-import Hand from '../../assets/categories/hand.png';
-import Leg from '../../assets/categories/leg.png';
-import Eye from '../../assets/categories/eye.png';
-import Timer from '../../assets/categories/timer.png';
-import { Category } from '../../components/ildar/categories/Category';
+import Man from '../assets/categories/man.png';
+import Back from '../assets/categories/back.png';
+import Hand from '../assets/categories/hand.png';
+import Leg from '../assets/categories/leg.png';
+import Eye from '../assets/categories/eye.png';
+import Timer from '../assets/categories/timer.png';
 
 const warmUps = [
   {
     id: 1,
     image: Man,
     alt: 'Man',
-    className: 'categories__without-flex-direction',
+    className: styles.categories__without_flex_direction,
     name: 'Разминка для шеи и плеч',
     time: '5 минут',
     pros: 'Расслабляет мышцы спины, плеч и шеи',
@@ -24,7 +25,7 @@ const warmUps = [
     id: 2,
     image: Back,
     alt: 'Back',
-    className: 'categories__with-flex-direction',
+    className: styles.categories__with_flex_direction,
     name: 'Разминка для спины',
     time: '3-5 минут',
     pros: 'Обеспечивает правильную циркуляцию крови',
@@ -35,7 +36,7 @@ const warmUps = [
     id: 3,
     image: Hand,
     alt: 'Hand',
-    className: 'categories__without-flex-direction',
+    className: styles.categories__without_flex_direction,
     name: 'Разминка для кистей рук',
     time: '3-5 минут',
     pros: 'Повышает подвижность суставов',
@@ -46,7 +47,7 @@ const warmUps = [
     id: 4,
     image: Leg,
     alt: 'Leg',
-    className: 'categories__with-flex-direction',
+    className: styles.categories__with_flex_direction,
     name: 'Разминка для ног и ступней',
     time: '5-8 минут',
     pros: 'Улучшает метаболизм',
@@ -57,7 +58,7 @@ const warmUps = [
     id: 5,
     image: Eye,
     alt: 'Eye',
-    className: 'categories__without-flex-direction',
+    className: styles.categories__without_flex_direction,
     name: 'Разминка для глаз',
     time: '3-5 минут',
     pros: 'Снимает усталость',
