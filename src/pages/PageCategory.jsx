@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from '../components/categories/categories.module.scss';
-import { Category } from '../components/categories/Category';
+import { Category } from '../components';
 // images
 import Man from '../assets/categories/man.png';
 import Back from '../assets/categories/back.png';
