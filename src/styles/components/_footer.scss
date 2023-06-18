@@ -33,31 +33,6 @@ footer {
             flex-direction: column;
             align-items: center;
             gap: 25px;
-
-            &__store {
-                width: 220px;
-                height: 60px;
-                border-radius: 20px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                gap: 10px;
-                background: linear-gradient(90deg, #0164E7 2.94%, #019CF4 105.65%);
-
-                img {
-                    width: 40px;
-                    height: 40px;
-                }
-
-                span {
-                    color: $white;
-                    font-size: 20px;
-                    font-weight: 700;
-                    line-height: 24px;
-                }
-
-            }
-
         }
     }
 

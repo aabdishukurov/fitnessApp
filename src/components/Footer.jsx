@@ -1,8 +1,8 @@
 import React from 'react'
 import logo from '../assets/logo.png'
-import logo_app_store from '../assets/footer/app_store.png'
-import logo_play_store from '../assets/footer/play_store.png'
 import { NavLink } from 'react-router-dom'
+import PlayStoreButton from './ildar/categories/button/PlayStoreButton'
+import AppStoreButton from './ildar/categories/button/AppStoreButton'
 
 const Footer = () => {
 
@@ -25,11 +25,6 @@ const Footer = () => {
         { link: "/main", title: "Настройка пользователя" },
         { link: "/main", title: "Уведомления" },
         { link: "/main", title: "Хотите стать частью команды?" },
-    ]
-
-    const apps = [
-        { logo: logo_play_store, title: "Play Store", link: "/", alt: "play_store" },
-        { logo: logo_app_store, title: "App Store", link: "/", alt: "app_store" },
     ]
 
     return (
@@ -62,12 +57,8 @@ const Footer = () => {
                     </ul>
                 </div>
                 <div className='footer__bottom__application'>
-                    {apps.map((item, index) => (
-                        <div key={index} className='footer__bottom__application__store'>
-                            <img src={item.logo} alt={item.alt} />
-                            <span>{item.title}</span>
-                        </div>
-                    ))}
+                    <PlayStoreButton />
+                    <AppStoreButton />
                 </div>
             </div>
         </footer>
