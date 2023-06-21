@@ -1,4 +1,5 @@
 import React from 'react';
+import styles from './categories.module.scss';
 import { Button } from './button/Button';
 import { Link } from 'react-router-dom';
 
@@ -15,18 +16,18 @@ export const Category = ({
   routeName,
 }) => {
   return (
-    <div className="categories">
+    <div className={styles.categories}>
       <div className={className}>
-        <div className="categories__image-side">
+        <div className={styles.categories__image_side}>
           <img src={categoryImage} alt={alt} />
         </div>
-        <div className="categories__text-side">
-          <div className="text-side__name">
+        <div className={styles.categories__text_side}>
+          <div className={styles.text_side__name}>
             <h3>{name}</h3>
             <img src={timerImage} alt="timer" />
             <p>{time}</p>
           </div>
-          <div className="categories__pros-side">
+          <div className={styles.categories__pros_side}>
             <div>
               <div>
                 <span></span>
