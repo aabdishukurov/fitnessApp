@@ -99,7 +99,7 @@ export const Categories = () => {
                 <p>{warmup.pros3}</p>
               </div>
             </div>
-            <Link>
+            <Link to={`/InfoExercises/${warmup.alt}`}>
               <Button />
             </Link>
           </div>
