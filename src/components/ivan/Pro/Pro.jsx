@@ -1,5 +1,5 @@
-import style from './pro.module.scss'
-import { Card } from "../Card/Card";
+import style from "./pro.module.scss";
+import { ProCard } from "../../";
 
 const cards = [
   {
@@ -24,7 +24,7 @@ const cards = [
       "Персональная статистика",
       "Гидрализация",
     ],
-    price: "$2.00/мес.",
+    price: "$0.99/мес.",
   },
   {
     id: 3,
@@ -38,7 +38,7 @@ const cards = [
       "Отслеживание шагов к цели",
       "Нутрициология",
     ],
-    price: "$4.00/мес.",
+    price: "$1.99/мес.",
   },
 ];
 
@@ -73,7 +73,7 @@ export const Pro = () => {
           </div>
           <ul className={style.pro__cards}>
             {cards.map((card) => (
-              <Card info={card} key={card.id} className={style.pro__card}/>
+              <ProCard info={card} key={card.id} className={style.pro__card} />
             ))}
           </ul>
         </div>
