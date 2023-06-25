@@ -2,8 +2,9 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { registerUser } from "../../store/slices/authSlice";
-import logoFit from "../../assets/image/logo_fitbreak.jpg";
-import Yoga from "../../assets/image/yoga.jpg";
+import { useAuth } from "../../hooks/use-auth";
+import logoFit from "../../assets/categories/logo_fitbreak.jpg";
+import Yoga from "../../assets/categories/yoga.jpg";
 import styles from "./FormRegister.module.scss";
 
 import BtnHide from "../BtnHide";
@@ -29,8 +30,8 @@ const FormRegister = ({ handleClick }) => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
-  const isAuthenticated = useSelector((state) => state.auth.isAuthenticated);
-  console.log(isAuthenticated);
+  const { isAuthenticated } = useAuth();
+
   const pattern = "(?=.*d)(?=.*[a-z])(?=.*[A-Z]).{8,}";
   const showBtn = () => {
     setIsType(!isType);
@@ -122,20 +123,22 @@ const FormRegister = ({ handleClick }) => {
   };
 
   return (
-    <div className="form">
-      <div className="form__wrapper-logos">
-        <img className="form__logo" src={logoFit} alt="FitBreak" />
-        <img className="form__yoga" src={Yoga} alt="yoga" />
+    <div className={styles.form}>
+      <div className={styles.form__wrapperLogos}>
+        <img className={styles.form__logo} src={logoFit} alt="FitBreak" />
+        <img className={styles.form__yoga} src={Yoga} alt="yoga" />
       </div>
 
-      <div className="form__wrapper">
-        <h2 className="form__title">Добро пожаловать!</h2>
-        <h3 className="form__subtitle">Зарегистрируйтесь с помощью e-mail</h3>
+      <div className={styles.form__wrapper}>
+        <h2 className={styles.form__title}>Добро пожаловать!</h2>
+        <h3 className={styles.form__subtitle}>
+          Зарегистрируйтесь с помощью e-mail
+        </h3>
         <form onSubmit={handleSubmit}>
-          <label className="form__label">
+          <label className={styles.form__label}>
             Номер телефона или e-mail*
             <Input
-              className="form__input"
+              className={styles.form__input}
               type="email"
               value={email}
               title={""}
@@ -149,10 +152,10 @@ const FormRegister = ({ handleClick }) => {
             )}
           </label>
 
-          <label className="form__label">
+          <label className={styles.form__label}>
             Создайте пароль*
             <Input
-              className="form__input"
+              className={styles.form__input}
               type={isType ? "password" : "text"}
               pattern={pattern}
               // title="Должно содержать по крайней мере одно число, одну заглавную и строчную буквы, а также не менее 8 и более символов"
@@ -169,10 +172,10 @@ const FormRegister = ({ handleClick }) => {
             )}
             <BtnHide isType={isType} showBtn={showBtn} />
           </label>
-          <label className="form__label">
+          <label className={styles.form__label}>
             Подтвердите пароль*
             <Input
-              className="form__input"
+              className={styles.form__input}
               type={type ? "password" : "text"}
               value={confirmPassword}
               handleChange={handleConfirmPasswordChange}
@@ -185,11 +188,11 @@ const FormRegister = ({ handleClick }) => {
             <BtnHide isType={type} showBtn={showText} />
           </label>
 
-          <div className="form__inner">
-            <label className="form__label">
+          <div className={styles.form__inner}>
+            <label className={styles.form__label}>
               Имя*
               <Input
-                className="form__input-names"
+                className={styles.form__inputNames}
                 type="text"
                 value={userName}
                 handleChange={handleNameChange}
@@ -198,10 +201,10 @@ const FormRegister = ({ handleClick }) => {
                 placeholder="Введите имя"
               />
             </label>
-            <label className="form__label">
+            <label className={styles.form__label}>
               Фамилия*
               <Input
-                className="form__input-names"
+                className={styles.form__inputNames}
                 type="text"
                 value={secondName}
                 handleChange={handleSecondNameChange}
@@ -212,24 +215,17 @@ const FormRegister = ({ handleClick }) => {
             </label>
           </div>
 
-          <div className="form__wrapper-auth">
-            <p className="form__subtitle">
-              <span className="form__line"></span> Войти через
-              <span className="form__line"></span>
+          <div className={styles.form__wrapperAuth}>
+            <p className={styles.form__subtitle}>
+              <span className={styles.form__line}></span> Войти через
+              <span className={styles.form__line}></span>
             </p>
             <GoogleAuthButton />
           </div>
 
-          <div className="form__wrapper-btns">
-            <BtnAuth
-              className="form__btn-register"
-              value={"Зарегистрироваться"}
-            />
-            <BtnAuth
-              className="form__btn-enter"
-              value={"Войти"}
-              to={"/login"}
-            />
+          <div className={styles.form__wrapperBtns}>
+            <BtnAuth value={"Зарегистрироваться"} />
+            <BtnAuth value={"Войти"} to={"/login"} />
           </div>
         </form>
       </div>

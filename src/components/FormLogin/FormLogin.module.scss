@@ -1,0 +1,92 @@
+@import "../../styles/index.scss";
+.formLogin {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 58px;
+  margin: 0 auto;
+  width: 830px;
+  padding: 20px 10px;
+  border-radius: 20px;
+  background: #ffffff;
+  &__reset {
+    display: flex;
+    align-items: center;
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: #767474;
+    font-weight: normal;
+    cursor: pointer;
+  }
+  &__title {
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 10px;
+    color: $secondary-color;
+  }
+  &__subtitle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    @include fz18;
+    color: $secondary-color;
+    margin-bottom: 40px;
+  }
+  &__wrapper {
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 35px;
+    }
+  }
+  &__wrapperLogos {
+    display: flex;
+    justify-content: space-between;
+    height: 538px;
+    padding: 40px 0;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__logo {
+    display: block;
+    width: 140px;
+    height: 56px;
+  }
+  &__input {
+    @include inputs;
+  }
+  &__label {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    justify-content: center;
+    @include fz16;
+    color: $secondary-color;
+    span {
+      position: absolute;
+      top: 55px;
+      z-index: 10;
+      font-family: "Montserrat";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 15px;
+      color: #e70101;
+    }
+  }
+  &__wrapperBtns {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+}

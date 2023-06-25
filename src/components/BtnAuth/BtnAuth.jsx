@@ -1,15 +1,15 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import styles from "./BtnAuth.module.scss";
-const BtnAuth = ({ className, value, to, handleSubmit }) => {
+const BtnAuth = ({ value, to, handleSubmit, className }) => {
   return (
     <>
       {!to ? (
-        <button onClick={handleSubmit} className={className}>
+        <button onClick={handleSubmit} className={styles.btnEnter}>
           {value}
         </button>
       ) : (
-        <Link className={className} to={to}>
+        <Link className={styles.registerBtn} to={to}>
           {value}
         </Link>
       )}
