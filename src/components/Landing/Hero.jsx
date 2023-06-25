@@ -1,8 +1,8 @@
 import React from 'react'
-import { Button } from './ildar/categories/button/Button'
-import PlayButton from './ildar/categories/button/PlayButton'
-import AppStoreButton from './ildar/categories/button/AppStoreButton'
-import PlayStoreButton from './ildar/categories/button/PlayStoreButton'
+import { Button } from '.././ildar/categories/button/Button'
+import PlayButton from '../UI/PlayButton'
+import AppStoreButton from '../UI/AppStoreButton'
+import PlayStoreButton from '../UI/PlayStoreButton'
 
 const Hero = () => {
     return (

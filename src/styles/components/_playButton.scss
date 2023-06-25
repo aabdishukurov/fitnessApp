@@ -13,4 +13,13 @@
         height: 68px;
         background: url('../../assets/landing/arrow-right.png') center no-repeat;
     }
+
+    &:hover {
+        cursor: pointer;
+        border: 5px solid $black;
+
+        .triangle {
+            filter: brightness(0);
+        }
+    }
 }

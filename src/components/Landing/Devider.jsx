@@ -1,6 +1,6 @@
 import React from 'react'
-import BlueDevider from '../assets/main_page_devider/blue_devider.png'
-import PurpleDevider from '../assets/main_page_devider/purple_devider.png'
+import BlueDevider from '../../assets/main_page_devider/blue_devider.png'
+import PurpleDevider from '../../assets/main_page_devider/purple_devider.png'
 
 const Devider = () => {
     return (

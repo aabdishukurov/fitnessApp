@@ -1,13 +1,19 @@
 footer {
+    margin-top: 100px;
+    background: $gradient-blue;
     height: 330px;
-    padding: 30px 74px 59px;
-    border: 4px solid #0164E7;
     padding: 30px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    color: $white;
+
+    .footer__top {
+        padding: 0 174px;
+    }
 
     .footer__bottom {
+        padding: 0 174px;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -24,7 +30,7 @@ footer {
 
             a {
                 text-decoration: none;
-                color: $black;
+                color: $white;
             }
         }
 

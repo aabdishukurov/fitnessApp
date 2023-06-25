@@ -1,5 +1,5 @@
 import React from 'react'
-import YogaImage from '../assets/landing/landing_about.png'
+import YogaImage from '../../assets/landing/landing_about.png'
 
 const About = () => {
     return (

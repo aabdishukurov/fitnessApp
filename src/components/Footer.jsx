@@ -1,8 +1,8 @@
 import React from 'react'
-import logo from '../assets/logo.png'
+import logo from '../assets/footer/logo.png'
 import { NavLink } from 'react-router-dom'
-import PlayStoreButton from './ildar/categories/button/PlayStoreButton'
-import AppStoreButton from './ildar/categories/button/AppStoreButton'
+import PlayStoreButtonFooter from '../components/UI/PlayStoreButtonFooter'
+import AppStoreButtonFooter from '../components/UI/AppStoreButtonFooter'
 
 const Footer = () => {
 
@@ -57,8 +57,8 @@ const Footer = () => {
                     </ul>
                 </div>
                 <div className='footer__bottom__application'>
-                    <PlayStoreButton />
-                    <AppStoreButton />
+                    <PlayStoreButtonFooter />
+                    <AppStoreButtonFooter />
                 </div>
             </div>
         </footer>

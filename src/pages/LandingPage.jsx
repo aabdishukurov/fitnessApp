@@ -1,21 +1,41 @@
 import React from 'react'
-import Categories from '../components/ildar/categories/Categories'
-import Hero from '../components/Hero'
-import About from '../components/About'
-import Goals from '../components/Goals'
-import Devider from '../components/Devider'
+import CategoriesDemo from '../components/Landing/CategoriesDemo'
+import Hero from '../components/Landing/Hero'
+import About from '../components/Landing/About'
+import Goals from '../components/Landing/Goals'
+import Devider from '../components/Landing/Devider'
 
 const LandingPage = () => {
+
+    const isLogin = true
+    const isPremium = false
+
+    let content = isLogin
+        ? (
+            <>
+                <Hero />
+                <Devider />
+                <Goals />
+                <Devider />
+                <CategoriesDemo />
+            </>
+        )
+        : isPremium
+            ? (
+                <div>Premium</div>
+            )
+            : (
+                <>
+                    <Hero />
+                    <Devider />
+                    <About />
+                    <Devider />
+                    <CategoriesDemo />
+                </>
+            )
+
     return (
-        <div>
-            <Hero />
-            <Devider />
-            <About />
-            <Devider />
-            <Goals />
-            <Devider />
-            <Categories />
-        </div>
+        content
     )
 }
 

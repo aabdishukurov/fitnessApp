@@ -1,12 +1,12 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import Logo from '../../../../assets/footer/app_store.svg'
+import Logo from '../../assets/footer/app_store.svg'
 
 const AppStoreButton = () => {
     return (
         <Link
             to='/https://www.apple.com/app-store/'
-            className='storeButton'
+            className='storeButtonFooter'
         >
             <button>
                 <div>

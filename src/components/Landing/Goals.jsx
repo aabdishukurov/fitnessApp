@@ -1,8 +1,8 @@
 import React from 'react'
-import Goal1 from '../assets/landing/goal1.svg'
-import Goal2 from '../assets/landing/goal2.svg'
-import Goal3 from '../assets/landing/goal3.svg'
-import Goal4 from '../assets/landing/goal4.svg'
+import Goal1 from '../../assets/landing/goal1.svg'
+import Goal2 from '../../assets/landing/goal2.svg'
+import Goal3 from '../../assets/landing/goal3.svg'
+import Goal4 from '../../assets/landing/goal4.svg'
 
 const goals = [
     { img: Goal1, alt: "goal1", title: "Устранение усталости", desc: "Персональная настройка порядка разминок, которые будут оповещать вас через уведомления" },

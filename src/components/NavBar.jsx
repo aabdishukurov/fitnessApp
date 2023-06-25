@@ -2,6 +2,8 @@ import React from 'react'
 import logo from '../assets/logo.png'
 import arrow from '../assets/navbar/arrow.png'
 import { NavLink, useNavigate } from 'react-router-dom'
+import avatar from '../assets/navbar/ava.png'
+import premium from '../assets/navbar/premium.svg'
 
 const links = [
     { link: "/", title: "Главная" },
@@ -10,8 +12,36 @@ const links = [
     { link: "/main", title: "FitBreak" },
 ]
 
+
 const NavBar = () => {
     const navigate = useNavigate()
+
+    const isLogin = false
+    const isPremium = false
+
+    const name = "name"
+
+    let profile = (
+        isPremium
+            ? (
+                <>
+                    <img className='avatar' src={avatar} alt="avatar" />
+                    <img className='badge' src={premium} alt="premium_badge" />
+                    <span>Привет, {name}!</span>
+                </>
+            ) : isLogin
+                ? (
+                    <>
+                        <img src={avatar} alt="avatar" />
+                        <span>Привет, {name}!</span>
+                    </>
+                ) : (
+                    <>
+                        <button className='btn_signin' onClick={() => navigate('/login')}>Войти</button>
+                        <button className='btn_signup' onClick={() => navigate('/signup')}>Присоединиться</button>
+                    </>
+                )
+    )
 
     return (
         <header>
@@ -25,7 +55,7 @@ const NavBar = () => {
                     </div>
                 </div>
             </div>
-            <div className='nav__bottom'>
+            <nav className='nav__bottom'>
                 <div className='nav__bottom__l'>
                     <img
                         src={logo}
@@ -43,11 +73,12 @@ const NavBar = () => {
                         </ul>
                     </div>
                     <div className='nav__bottom__r__btns'>
-                        <button className='btn_signin'>Войти</button>
-                        <button className='btn_signup'>Присоединиться</button>
+                        {
+                            profile
+                        }
                     </div>
                 </div>
-            </div>
+            </nav>
         </header>
     )
 }
