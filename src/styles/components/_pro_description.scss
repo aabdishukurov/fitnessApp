@@ -9,14 +9,14 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     margin: auto;
     border-left: solid 1px #0164E7;
     border-right: solid 1px #0164E7;
     margin-bottom: 37px;
 
     h4 {
-        color: #0164E7;
+        color: $blue;
         font-size: 45px;
         width: 201px;
         height: 55px;
@@ -58,7 +58,7 @@
     }
 }
 
-.subscription-cards{
+.subscription-cards {
     width: 1202px;
     display: flex;
     flex-direction: row;
@@ -66,19 +66,20 @@
     margin: 0 auto 79px;
 
     .subscription-card {
+        padding: 10px 0px 32px 0px;
         width: 359px;
         border-radius: 30px;
-        background-color: #9747FF;
+        background-color: #FD6815;
         display: flex;
         flex-direction: column;
-        justify-content: space-around;
+        justify-content: space-between;
         align-items: center;
     }
 
     .subscription-card-title {
         font-size: 25px;
         color: #FFFFFF;
-        margin:10px 0 40px;
+        margin: 10px 0 40px;
 
         .title-FitBreak {
             font-weight: 700;
@@ -95,7 +96,7 @@
         padding-left: 30px;
 
         li {
-            list-style-image: url('../../assets/pro_description/listContentAccessable.png'); 
+            list-style-image: url('../../assets/pro_description/listContentAccessable.png');
             color: #FFFFFF;
             margin-bottom: 8px;
             font-weight: 400;
@@ -103,28 +104,25 @@
             line-height: 40px;
             padding-left: 21.56px;
         }
-        
-        li.no-access {
-                list-style-image: url('../../assets/pro_description/listContentNotAccessable.png')
-            }
+
     }
 
     button {
         width: 278px;
         height: 60px;
         background-color: #FFFFFF;
-        color: #0164E7;
+        color: #FD6815;
         font-weight: 700;
         font-size: 25px;
         border-radius: 20px;
-        border-color: #FFFFFF;
+        border: none;
         margin: 40px 0 32px;
+
+        &:hover {
+            color: $white;
+            background-color: #FD6815;
+            border: 3px solid $white;
+        }
     }
 
 }
-
-
-
-
-
-
