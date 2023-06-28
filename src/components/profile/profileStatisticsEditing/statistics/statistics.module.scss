@@ -1,0 +1,34 @@
+@import '../../../../styles/variables.scss';
+
+.statistic {
+  border-radius: 20px;
+  padding: 30px 40px;
+  background: rgba(158, 220, 255, 1);
+  text-align: center;
+  h3 {
+    font-weight: 700;
+    font-size: 50px;
+  }
+  p {
+    margin-top: 10px;
+    font-weight: 500;
+    font-size: 30px;
+  }
+}
+
+.statistics {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  div {
+    height: 60px;
+    width: 2px;
+    background: $blue;
+  }
+  h3 {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 40px;
+    color: $dark;
+  }
+}
