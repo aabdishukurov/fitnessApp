@@ -1,0 +1,21 @@
+@import '../../../styles/variables.scss';
+
+.hr {
+  margin-top: 35px;
+  height: 3.5px;
+  background: $gradient-blue;
+}
+.hexagon_content {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.statistics_content {
+  margin-top: 50px;
+}
+.statistic__content {
+  padding: 70px 0;
+  display: flex;
+  justify-content: space-between;
+}

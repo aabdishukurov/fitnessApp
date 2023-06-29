@@ -1,0 +1,56 @@
+@import '../../../styles/variables.scss';
+
+.hr {
+  margin-top: 35px;
+  height: 3.5px;
+  background: $gradient-blue;
+}
+.inputs {
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+.select_top {
+  margin-top: 40px;
+}
+
+.warm_up {
+  margin-top: 20px;
+  margin-left: 34px;
+  h3 {
+    font-weight: 700;
+    font-size: 28px;
+  }
+  p {
+    margin-top: 20px;
+    font-weight: 400;
+    font-size: 26px;
+  }
+}
+.buttons {
+  margin-top: 50px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  button {
+    padding: 15px 40px !important;
+    &:nth-child(1) {
+      font-weight: 700;
+      font-size: 20px;
+      color: $white;
+      background: $gradient-blue;
+      border: none;
+      cursor: pointer;
+    }
+    &:nth-child(2) {
+      font-weight: 700;
+      font-size: 20px;
+      color: $blue;
+      background: transparent;
+      border: 2px solid $blue;
+      cursor: pointer;
+    }
+  }
+}
