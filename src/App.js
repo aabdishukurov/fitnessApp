@@ -8,9 +8,8 @@ import LoginPage from "./pages/LoginPage";
 import { GoogleOAuthProvider } from "@react-oauth/google";
 import { Categories } from "./components";
 import Layout from "./components/Layout";
-import LandingPage from "./pages/LandingPage";
+import LandingPage from "./pages/LandingPage/LandingPage";
 import { InfoExercises } from "./pages/InfoExercises/InfoExercises";
-import WaterCalculator from "./components/waterCalculator/WaterCalculator";
 import { PageHome, PageProHome } from "./pages";
 
 function App() {
@@ -25,13 +24,13 @@ function App() {
             <Routes>
               <Route path="/register" element={<RegisterPage />} />
               <Route path="/login" element={<LoginPage />} />
-              <Route path="/categories" element={<Category />} />
+              <Route path="/categoriesss" element={<Category />} />
               <Route path="/categories" element={<Categories />} />
               <Route path="/InfoExercises/:id" element={<InfoExercises />} />
               <Route path="/" element={<PageHome />} />
               <Route path="/pro" element={<PageProHome />} />
-              <Route path="/" element={<Layout />} />
-              <Route path="/" element={<LandingPage />} />
+              {/* <Route path="/" element={<Layout />} />
+              <Route path="/" element={<LandingPage />} /> */}
             </Routes>
           </BrowserRouter>
         </Provider>
