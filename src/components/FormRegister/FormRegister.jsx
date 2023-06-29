@@ -30,7 +30,7 @@ const FormRegister = ({ handleClick }) => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
-  const { isAuthenticated } = useAuth();
+  const { isAuthenticated, isLoading } = useAuth();
 
   const pattern = "(?=.*d)(?=.*[a-z])(?=.*[A-Z]).{8,}";
   const showBtn = () => {
@@ -128,7 +128,6 @@ const FormRegister = ({ handleClick }) => {
         <img className={styles.form__logo} src={logoFit} alt="FitBreak" />
         <img className={styles.form__yoga} src={Yoga} alt="yoga" />
       </div>
-
       <div className={styles.form__wrapper}>
         <h2 className={styles.form__title}>Добро пожаловать!</h2>
         <h3 className={styles.form__subtitle}>
