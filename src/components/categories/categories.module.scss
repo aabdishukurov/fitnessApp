@@ -1,9 +1,46 @@
+@import '../../styles/variables.scss';
+
 .categories {
+<<<<<<< HEAD:src/styles/components/_categories.scss
     padding: 50px 0;
     width: 1100px;
     margin: 0 auto;
     &__without-flex-direction {
       padding: 60px 0 60px 0;
+=======
+  padding: 10px 0;
+  width: 1100px;
+  margin: 0 auto;
+  &__without_flex_direction {
+    padding: 30px 0 30px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__with_flex_direction {
+    padding: 30px 0 30px 0;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    align-items: center;
+  }
+  &__blue_line_left {
+    margin-left: -120px;
+    display: flex;
+    justify-content: start;
+  }
+  &__blue_line_right {
+    margin-left: 677px;
+    display: flex;
+    justify-content: start;
+  }
+  &__blue_line_center {
+    display: flex;
+    justify-content: center;
+  }
+  &__text_side {
+    .text_side__name {
+>>>>>>> 32828fa07c53bad885685dd4fa2a1a7e32952ed7:src/components/categories/categories.module.scss
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -32,8 +69,17 @@
         }
       }
     }
+<<<<<<< HEAD:src/styles/components/_categories.scss
     &__pros-side {
       padding: 20px 0;
+=======
+  }
+  &__pros_side {
+    padding: 20px 0;
+    div {
+      display: flex;
+      gap: 15px;
+>>>>>>> 32828fa07c53bad885685dd4fa2a1a7e32952ed7:src/components/categories/categories.module.scss
       div {
         display: flex;
         gap: 15px;
@@ -104,7 +150,34 @@
         color: $blue;
       }
     }
+<<<<<<< HEAD:src/styles/components/_categories.scss
     a {
       text-decoration: none;
     }
   }
+=======
+  }
+  a {
+    text-decoration: none;
+  }
+}
+.button_style {
+  padding: 50px 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  button {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 15px 25px;
+    background: $orange;
+    font-weight: 700;
+    font-size: 25px;
+    color: $white;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+  }
+}
+>>>>>>> 32828fa07c53bad885685dd4fa2a1a7e32952ed7:src/components/categories/categories.module.scss

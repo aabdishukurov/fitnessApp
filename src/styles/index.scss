@@ -1,9 +1,13 @@
+<<<<<<< HEAD
 @import "./libs/variables.scss";
 @import "./libs/mixins.scss";
 @import "./libs/reset.scss";
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
 @import './variables.scss';
 @import './components/all';
+=======
+@import url('https://fonts.googleapis.com/css2?family=Kulim+Park:wght@700&family=Montserrat:wght@400;500;600;700&display=swap');
+>>>>>>> 32828fa07c53bad885685dd4fa2a1a7e32952ed7
 
 body{ 
     font-family: 'Montserrat', sans-serif;
@@ -16,3 +20,16 @@ body{
   padding: 0;
   box-sizing: border-box;
 }
+<<<<<<< HEAD
+=======
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  width: 90%;
+  margin: 0 auto;
+}
+
+ul {
+  list-style: none;
+}
+>>>>>>> 32828fa07c53bad885685dd4fa2a1a7e32952ed7

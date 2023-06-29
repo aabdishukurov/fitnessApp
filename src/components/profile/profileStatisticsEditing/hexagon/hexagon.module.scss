@@ -1,0 +1,95 @@
+@import '../../../../styles/variables.scss';
+
+.hexagon_wrapper {
+  display: flex;
+  width: 260px;
+  height: 260px;
+  border-radius: 5px;
+  &__title_content {
+    z-index: 10;
+    transform: rotate(-90deg);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px;
+    p {
+      font-weight: 500;
+      font-size: 30px;
+      color: $white;
+    }
+    h3 {
+      font-weight: 800;
+      font-size: 43px;
+      color: rgba(248, 253, 21, 1);
+    }
+  }
+}
+
+.hexagon {
+  position: relative;
+  width: 46%;
+  height: 80%;
+  margin: auto;
+  color: $white;
+  background: rgba(118, 116, 116, 1);
+  border-radius: 5px;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  transition: 0.5s;
+  box-shadow: 1px 1px 50px 5px rgba(118, 116, 116, 1);
+  transform: rotate(90deg);
+}
+.hexagonfitBreakLvlOn {
+  position: relative;
+  width: 46%;
+  height: 80%;
+  margin: auto;
+  color: $white;
+  background: rgba(110, 175, 26, 1);
+  border-radius: 5px;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  transition: 0.5s;
+  box-shadow: 1px 1px 50px 5px rgba(110, 175, 26, 1);
+  transform: rotate(90deg);
+}
+
+.hexagon:before,
+.hexagon:after {
+  position: absolute;
+  content: '';
+  background: inherit;
+  height: 100%;
+  width: 100%;
+  border-radius: 0;
+  transition: 0.5s;
+  transform-origin: center;
+  border-radius: 5px;
+}
+.hexagonfitBreakLvlOn:before,
+.hexagonfitBreakLvlOn:after {
+  position: absolute;
+  content: '';
+  background: inherit;
+  height: 100%;
+  width: 100%;
+  border-radius: 0;
+  transition: 0.5s;
+  transform-origin: center;
+  border-radius: 5px;
+}
+.hexagon:before {
+  transform: rotateZ(60deg);
+}
+.hexagon:after {
+  transform: rotateZ(-60deg);
+}
+.hexagonfitBreakLvlOn::before {
+  transform: rotateZ(60deg);
+}
+.hexagonfitBreakLvlOn:after {
+  transform: rotateZ(-60deg);
+}

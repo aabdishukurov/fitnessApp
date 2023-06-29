@@ -58,4 +58,8 @@ const Timer = () => {
     );
 }
 
+<<<<<<< HEAD
 export default Timer;
+=======
+export default Timer;
+>>>>>>> 32828fa07c53bad885685dd4fa2a1a7e32952ed7
