@@ -1,6 +1,14 @@
+import { useDispatch } from "react-redux";
 import style from "./ProCard.module.scss";
+import { getPro } from "../../../store/pro/proSlice";
 
 export const ProCard = ({ info, className }) => {
+  const dispatch = useDispatch();
+
+  const buyPro = () => {
+    dispatch(getPro());
+  };
+
   return (
     <li className={`${className} ${style.card} `}>
       <div className={style.card__title}>
@@ -13,7 +21,9 @@ export const ProCard = ({ info, className }) => {
           </li>
         ))}
       </ul>
-      <button className={style.card__button}>Купить: {info.price}</button>
+      <button className={style.card__button} onClick={buyPro}>
+        Купить: {info.price}
+      </button>
     </li>
   );
 };
