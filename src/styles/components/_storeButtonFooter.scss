@@ -1,0 +1,55 @@
+.storeButtonFooter {
+    width: 220px;
+    height: 60px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: $white;
+    text-decoration: none;
+    transition: 400ms all;
+
+    button {
+        background: transparent;
+        border: transparent;
+        cursor: pointer;
+
+        div {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+
+            img {
+                filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg);
+                width: 32px;
+                height: 36px;
+            }
+
+            span {
+                color: $blue;
+                font-size: 20px;
+                font-weight: 700;
+                line-height: 24px;
+            }
+        }
+    }
+
+    &:hover {
+        background: $blue;
+        border: 3px solid $white;
+
+        button {
+            div {
+                img {
+                    filter: invert(0) brightness(1);
+                }
+
+                span {
+                    color: $white;
+                }
+            }
+        }
+    }
+
+}

@@ -1,0 +1,25 @@
+.playButton {
+    width: 135px;
+    height: 135px;
+    background: linear-gradient(90deg, #0164E7 2.94%, #019CF4 105.65%);
+    border-radius: 50%;
+    border: 5px solid $white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .triangle {
+        width: 68px;
+        height: 68px;
+        background: url('../../assets/landing/arrow-right.png') center no-repeat;
+    }
+
+    &:hover {
+        cursor: pointer;
+        border: 5px solid $black;
+
+        .triangle {
+            filter: brightness(0);
+        }
+    }
+}
