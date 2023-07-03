@@ -3,8 +3,8 @@ import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { registerUser } from "../../store/slices/authSlice";
 import { useAuth } from "../../hooks/use-auth";
-import logoFit from "../../assets/categories/logo_fitbreak.jpg";
-import Yoga from "../../assets/categories/yoga.jpg";
+import logoFit from "../../assets/register/logo_fitbreak.jpg";
+import Yoga from "../../assets/register/yoga.jpg";
 import styles from "./FormRegister.module.scss";
 
 import BtnHide from "../BtnHide";
@@ -90,15 +90,14 @@ const FormRegister = ({ handleClick }) => {
       const userData = {
         email,
         name: userName,
-        // secondName,
+        secondName,
         password,
-        avatar: "https://api.lorem.space/image/face?w=640&h=480&r=867",
       };
       console.log("userData", userData);
       dispatch(registerUser(JSON.stringify(userData)));
 
       if (isAuthenticated) {
-        navigate("/login");
+        navigate("/pro");
       }
     }
   };
@@ -135,7 +134,7 @@ const FormRegister = ({ handleClick }) => {
         </h3>
         <form onSubmit={handleSubmit}>
           <label className={styles.form__label}>
-            Номер телефона или e-mail*
+            Номер телефона или e-mail
             <Input
               className={styles.form__input}
               type="email"
@@ -152,7 +151,7 @@ const FormRegister = ({ handleClick }) => {
           </label>
 
           <label className={styles.form__label}>
-            Создайте пароль*
+            Создайте пароль
             <Input
               className={styles.form__input}
               type={isType ? "password" : "text"}
@@ -166,20 +165,19 @@ const FormRegister = ({ handleClick }) => {
             {!isValidPassword && (
               <span>
                 Должно содержать по крайней мере одно число, одну заглавную и
-                строчную буквы, а также не менее 8 и более символов
+                строчную буквы, а также не менее 8
               </span>
             )}
             <BtnHide isType={isType} showBtn={showBtn} />
           </label>
           <label className={styles.form__label}>
-            Подтвердите пароль*
+            Подтвердите пароль
             <Input
               className={styles.form__input}
               type={type ? "password" : "text"}
               value={confirmPassword}
               handleChange={handleConfirmPasswordChange}
               pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
-              // title="Должно содержать по крайней мере одно число, одну заглавную и строчную буквы, а также не менее 8 и более символов"
               brColor={!isValidConfirmPassword && "2px solid red"}
               placeholder={"Повторите пароль"}
             />
@@ -189,26 +187,24 @@ const FormRegister = ({ handleClick }) => {
 
           <div className={styles.form__inner}>
             <label className={styles.form__label}>
-              Имя*
+              Имя
               <Input
                 className={styles.form__inputNames}
                 type="text"
                 value={userName}
                 handleChange={handleNameChange}
                 isValid={isValidName}
-                // brColor={!isValidName && "2px solid red"}
                 placeholder="Введите имя"
               />
             </label>
             <label className={styles.form__label}>
-              Фамилия*
+              Фамилия
               <Input
                 className={styles.form__inputNames}
                 type="text"
                 value={secondName}
                 handleChange={handleSecondNameChange}
                 isValid={isValidName}
-                // brColor={!isValidName && "2px solid red"}
                 placeholder="Введите Фамилию"
               />
             </label>

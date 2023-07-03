@@ -4,9 +4,9 @@ import { loginUser } from "../../store/slices/authSlice";
 import BtnHide from "../BtnHide";
 import { useAuth } from "../../hooks/use-auth";
 import { useNavigate } from "react-router-dom";
-import logoFit from "../../assets/categories/logo_fitbreak.jpg";
-import Yoga from "../../assets/categories/yoga.jpg";
-import arrow from "../../assets/categories/arrow-right.svg";
+import logoFit from "../../assets/register/logo_fitbreak.jpg";
+import Yoga from "../../assets/register/yoga.jpg";
+import arrow from "../../assets/register/arrow-right.svg";
 import styles from "./FormLogin.module.scss";
 // import { useAuth } from "../../hooks/use-auth";
 import Input from "../Input";
@@ -64,7 +64,7 @@ function LoginForm() {
         </h3>
         <form onSubmit={handleSubmit}>
           <label className={styles.formLogin__label}>
-            Логин*
+            Логин
             <Input
               className={styles.formLogin__input}
               type="email"
@@ -78,7 +78,7 @@ function LoginForm() {
             {!isValidPassword && <span>неверный логин</span>}
           </label>
           <label className={styles.formLogin__label}>
-            Пароль*
+            Пароль
             <Input
               className={styles.formLogin__input}
               type={isType ? "password" : "text"}
@@ -91,7 +91,7 @@ function LoginForm() {
             />
             {!isValidPassword && <span>неверный пароль</span>}
             <b onClick={handleReset} className={styles.formLogin__reset}>
-              сбросить пароль <img src={arrow} alt="arrow right" />
+              очистить поле <img src={arrow} alt="arrow right" />
             </b>
             <BtnHide showBtn={showBtn} isType={isType} />
           </label>

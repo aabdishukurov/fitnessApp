@@ -1,7 +1,7 @@
 import React from "react";
 import { useDispatch } from "react-redux";
 import { googleLogin } from "../../store/slices/authSlice";
-import googleIcon from "../../assets/categories/google-icon.svg";
+import googleIcon from "../../assets/register/google-icon.svg";
 import styles from "./GoogleAuthButton.module.scss";
 import { useGoogleLogin } from "@react-oauth/google";
 
