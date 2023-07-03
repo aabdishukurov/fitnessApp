@@ -1,5 +1,5 @@
 import { useSelector } from "react-redux";
-import { Pro } from "../components";
+import { ProSection } from "../components";
 import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 
@@ -15,7 +15,7 @@ export const PageHome = () => {
 
   return (
     <main>
-      <Pro />
+      <ProSection />
     </main>
   );
 };
