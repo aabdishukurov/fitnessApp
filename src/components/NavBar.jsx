@@ -16,7 +16,7 @@ const links = [
 const NavBar = () => {
     const navigate = useNavigate()
 
-    const isLogin = true
+    const isLogin = false
     const isPremium = false
 
     const name = "Aboba"
