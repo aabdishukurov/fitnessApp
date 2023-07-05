@@ -16,10 +16,10 @@ const links = [
 const NavBar = () => {
     const navigate = useNavigate()
 
-    const isLogin = false
+    const isLogin = true
     const isPremium = false
 
-    const name = "name"
+    const name = "Aboba"
 
     let profile = (
         isPremium

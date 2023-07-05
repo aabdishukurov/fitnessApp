@@ -7,16 +7,6 @@ import { Link } from 'react-router-dom';
 
 const warmUps = [
     {
-        image: Leg,
-        alt: 'Leg',
-        className: 'categories__with-flex-direction',
-        name: 'Разминка для ног и ступней',
-        time: '5-8 минут',
-        pros: 'Улучшает метаболизм',
-        pros2: 'Обеспечивает приток кислорода',
-        pros3: 'Улучшает кровообращение',
-    },
-    {
         image: Eye,
         alt: 'Eye',
         className: 'categories__without-flex-direction',
@@ -25,6 +15,16 @@ const warmUps = [
         pros: 'Снимает усталость',
         pros2: 'Восстанавливает кровообращение в глазах',
         pros3: 'Укрепляет глазные мышцы',
+    },
+    {
+        image: Leg,
+        alt: 'Leg',
+        className: 'categories__with-flex-direction',
+        name: 'Разминка для ног и ступней',
+        time: '5-8 минут',
+        pros: 'Улучшает метаболизм',
+        pros2: 'Обеспечивает приток кислорода',
+        pros3: 'Улучшает кровообращение',
     },
 ];
 

@@ -8,7 +8,7 @@ import { ProDescription } from '../components/Landing/ProDescription'
 
 const LandingPage = () => {
 
-    const isLogin = false
+    const isLogin = true
     const isPremium = false
 
     let content = isLogin
