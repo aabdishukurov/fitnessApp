@@ -7,24 +7,24 @@ import AppStoreButtonFooter from '../components/UI/AppStoreButtonFooter'
 const Footer = () => {
 
     const links = [
-        { link: "/", title: "Главная" },
-        { link: "/main", title: "О FitBreak" },
-        { link: "/main", title: "Упражнения" },
-        { link: "/main", title: "FitBreak" },
+        { id: "1", link: "/", title: "Главная" },
+        { id: "2", link: "/main", title: "О FitBreak" },
+        { id: "3", link: "/main", title: "Упражнения" },
+        { id: "4", link: "/main", title: "FitBreak" },
     ]
 
     const help = [
-        { link: "/", title: "Часто задаваемые вопросы" },
-        { link: "/main", title: "Поддержка" },
-        { link: "/main", title: "Политика конфиденциальности" },
-        { link: "/main", title: "Условия использования" },
+        { id: "1", link: "/", title: "Часто задаваемые вопросы" },
+        { id: "2", link: "/main", title: "Поддержка" },
+        { id: "3", link: "/main", title: "Политика конфиденциальности" },
+        { id: "4", link: "/main", title: "Условия использования" },
     ]
 
     const personalization = [
-        { link: "/", title: "Тарифы" },
-        { link: "/main", title: "Настройка пользователя" },
-        { link: "/main", title: "Уведомления" },
-        { link: "/main", title: "Хотите стать частью команды?" },
+        { id: "1", link: "/", title: "Тарифы" },
+        { id: "2", link: "/main", title: "Настройка пользователя" },
+        { id: "3", link: "/main", title: "Уведомления" },
+        { id: "4", link: "/main", title: "Хотите стать частью команды?" },
     ]
 
     return (

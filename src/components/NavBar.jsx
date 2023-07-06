@@ -6,10 +6,10 @@ import avatar from '../assets/navbar/ava.png'
 import premium from '../assets/navbar/premium.svg'
 
 const links = [
-    { link: "/", title: "Главная" },
-    { link: "/main", title: "О FitBreak" },
-    { link: "/main", title: "Упражнения" },
-    { link: "/main", title: "FitBreak" },
+    { id: "1", link: "/", title: "Главная" },
+    { id: "2", link: "/main", title: "О FitBreak" },
+    { id: "3", link: "/main", title: "Упражнения" },
+    { id: "4", link: "/main", title: "FitBreak" },
 ]
 
 
@@ -67,8 +67,8 @@ const NavBar = () => {
                 <div className='nav__bottom__r'>
                     <div>
                         <ul>
-                            {links.map((item, index) => (
-                                <li key={index}><NavLink href={item.link}>{item.title}</NavLink></li>
+                            {links.map((item) => (
+                                <li key={item.id}><NavLink href={item.link}>{item.title}</NavLink></li>
                             ))}
                         </ul>
                     </div>

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Button } from '.././ildar/categories/button/Button'
+import { Button } from '../UI/Button'
 import PlayButton from '../UI/PlayButton'
 import AppStoreButton from '../UI/AppStoreButton'
 import PlayStoreButton from '../UI/PlayStoreButton'
