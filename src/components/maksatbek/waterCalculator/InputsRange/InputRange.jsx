@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-
+import style from '../../style/water.module.scss'
 const InputRange = () => {
     const [weight, setWeight] = useState(0)
     const [active, setActive] = useState(0)
@@ -17,30 +17,30 @@ const InputRange = () => {
 
     return (
         <>
-            <div className='weight_block'>
+            <div className={style.weight_block}>
                 <p>Ваш вес</p>
                 <input type='range' min='20' max='150' step='1' value={weight} onChange={handleChange}/>
                 <span>{weight} кг</span>
-                <div className='weight_range'>
+                <div className={style.weight_range}>
                     <p>20</p>
                     <p>80</p>
                     <p>150</p>
                 </div>
             </div>
-            <div className='activity_block'>
+            <div className={style.activity_block}>
                 <p>Физическая активность</p>
                 <input type='range' min='0' max='6' step='0.5' value={active} onChange={handleChangeActive}/>
                 <span>{active} ч</span>
-                <div className='activity_range'>
+                <div className={style.activity_range}>
                     <p>0</p>
                     <p>3</p>
                     <p>6</p>
                 </div>
 
             </div>
-            <div className='total_block'>
+            <div className={style.total_block}>
                 <p>Ваша рекомендуемая норма</p>
-                <div className="total_inner">
+                <div className={style.total_inner}>
                     <h3>{total}</h3>
                     <p>литра воды в день</p>
                 </div>
