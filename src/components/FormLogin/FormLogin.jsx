@@ -1,16 +1,17 @@
 import React, { useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { loginUser } from "../../store/slices/authSlice";
 import BtnHide from "../BtnHide";
+import Input from "../Input";
+import BtnAuth from "../BtnAuth";
 import { useAuth } from "../../hooks/use-auth";
 import { useNavigate } from "react-router-dom";
+
 import logoFit from "../../assets/register/logo_fitbreak.jpg";
 import Yoga from "../../assets/register/yoga.jpg";
 import arrow from "../../assets/register/arrow-right.svg";
 import styles from "./FormLogin.module.scss";
-// import { useAuth } from "../../hooks/use-auth";
-import Input from "../Input";
-import BtnAuth from "../BtnAuth";
+
 function LoginForm() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -22,7 +23,7 @@ function LoginForm() {
   const [isValidEmail, setIsValidEmail] = useState(true);
   const [isValidPassword, setIsValidPassword] = useState(true);
 
-  const { isAuthenticated, isLoading } = useAuth();
+  const { isAuthenticated } = useAuth();
   const handleSubmit = (e) => {
     e.preventDefault();
 
@@ -32,7 +33,9 @@ function LoginForm() {
     };
 
     dispatch(loginUser(userData));
-    navigate("/premium");
+    if (isAuthenticated) {
+      navigate("/premium");
+    }
   };
 
   const handleEmailChange = (event) => {

@@ -6,7 +6,15 @@ export const registerUser = createAsyncThunk(
   "auth/registerUser",
   async (userData) => {
     try {
-      const response = await api.post("users", userData);
+      const response = await api.post(
+        "/users/register",
+        JSON.stringify(userData),
+        {
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      );
       return response; //Ответом должен получить JWT token
     } catch (error) {
       throw error.response.data;
@@ -18,7 +26,16 @@ export const loginUser = createAsyncThunk(
   "auth/loginUser",
   async (userData) => {
     try {
-      const response = await api.post("/login", userData);
+      const response = await api.post(
+        "/users/login",
+        JSON.stringify(userData),
+        {
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      );
+      console.log(response);
       return response.data;
     } catch (error) {
       throw error.response.data;
@@ -30,7 +47,7 @@ export const googleLogin = createAsyncThunk(
   "auth/googleLogin",
   async (accessToken) => {
     try {
-      const response = await api.post("/google-login", { accessToken });
+      const response = await api.post("users/register", { accessToken });
       return response.data;
     } catch (error) {
       throw error.response.data;

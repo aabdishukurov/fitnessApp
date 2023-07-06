@@ -2,7 +2,7 @@ import axios from "axios";
 import Cookies from "js-cookie";
 
 const api = axios.create({
-  baseURL: "https://api.escuelajs.co/api/v1/",
+  baseURL: "https://fitbreak.geeks.kg/api/v1",
 });
 
 const checkTokenInterceptor = (config) => {

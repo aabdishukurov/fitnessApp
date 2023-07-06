@@ -30,9 +30,9 @@ const FormRegister = ({ handleClick }) => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
-  const { isAuthenticated, isLoading } = useAuth();
+  const { isAuthenticated } = useAuth();
 
-  const pattern = "(?=.*d)(?=.*[a-z])(?=.*[A-Z]).{8,}";
+  const pattern = "(?=.*[a-z])(?=.*[A-Z]).{8,}";
   const showBtn = () => {
     setIsType(!isType);
   };
@@ -89,12 +89,11 @@ const FormRegister = ({ handleClick }) => {
     ) {
       const userData = {
         email,
-        name: userName,
-        secondName,
+        username: userName,
         password,
       };
       console.log("userData", userData);
-      dispatch(registerUser(JSON.stringify(userData)));
+      dispatch(registerUser(userData));
 
       if (isAuthenticated) {
         navigate("/pro");
@@ -156,7 +155,6 @@ const FormRegister = ({ handleClick }) => {
               className={styles.form__input}
               type={isType ? "password" : "text"}
               pattern={pattern}
-              // title="Должно содержать по крайней мере одно число, одну заглавную и строчную буквы, а также не менее 8 и более символов"
               value={password}
               handleChange={handlePasswordChange}
               brColor={!isValidPassword && "2px solid red"}
