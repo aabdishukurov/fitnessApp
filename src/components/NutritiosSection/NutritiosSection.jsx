@@ -1,9 +1,9 @@
-import { Nutritio } from "../../index";
-import style from "./Nutritios.module.scss";
+import { NutritioCard } from "../index";
+import style from "./NutritiosSection.module.scss";
 
-import img1 from "../../../assets/Nutritios/1.jpg";
-import img2 from "../../../assets/Nutritios/2.jpg";
-import img3 from "../../../assets/Nutritios/3.jpg";
+import img1 from "../../assets/Nutritios1.jpg";
+import img2 from "../../assets/Nutritios2.jpg";
+import img3 from "../../assets/Nutritios3.jpg";
 
 const nutritosArray = [
   {
@@ -38,7 +38,7 @@ const nutritosArray = [
   },
 ];
 
-export const Nutritios = () => {
+export const NutritiosSection = () => {
   return (
     <section className={style.nutrios}>
       <div className={style.container}>
@@ -48,7 +48,7 @@ export const Nutritios = () => {
           </div>
           <ul className={style.nutritos_list}>
             {nutritosArray.map((info) => (
-              <Nutritio info={info} key={info.id} />
+              <NutritioCard info={info} key={info.id} />
             ))}
           </ul>
           <button className={style.button}>Смотреть весь список</button>

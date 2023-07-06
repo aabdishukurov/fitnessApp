@@ -1,4 +1,4 @@
-@import "../../../styles/variables.scss";
+@import "../../styles/variables.scss";
 
 .nutritio {
   background: #e2f5fd;
@@ -61,6 +61,8 @@
   height: 40px;
 }
 .button {
+  display: inline-block;
+  text-decoration: none;
   border-radius: 20px;
   border: none;
   background: $gradient-blue;
@@ -70,11 +72,11 @@
   font-size: 20px;
   line-height: 24px;
   cursor: pointer;
-  transition: .5s;
+  transition: 0.5s;
   &:hover {
     box-shadow: 0px 0px 20px 0px $dark-blue;
   }
   &:active {
-    background: linear-gradient(90deg, #0E3971 0%, #103C77 0%, #46B0ED 100%);
+    background: linear-gradient(90deg, #0e3971 0%, #103c77 0%, #46b0ed 100%);
   }
 }

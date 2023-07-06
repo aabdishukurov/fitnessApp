@@ -1,7 +1,7 @@
 import { Category } from "./categories/Category";
-import { ProSection } from "./ivan/Pro/ProSection";
-import { ProCard } from "./ivan/ProCard/ProCard";
-import { Nutritios } from "./ivan/Nutritios/Nutritios";
-import { Nutritio } from "./ivan/Nutritio/Nutritio";
+import { ProSection } from "./ProSection/ProSection";
+import { ProCard } from "./ProCard/ProCard";
+import { NutritiosSection } from "./NutritiosSection/NutritiosSection";
+import { NutritioCard } from "./NutritioCard/NutritioCard";
 
-export { Category, ProCard, ProSection, Nutritios, Nutritio };
+export { Category, ProCard, ProSection, NutritiosSection, NutritioCard };

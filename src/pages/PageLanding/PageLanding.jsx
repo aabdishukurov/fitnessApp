@@ -1,23 +1,21 @@
 import { useSelector } from "react-redux";
-import { Nutritios } from "../components/";
+import { ProSection } from "../../components";
 import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 
-export const PageProHome = () => {
+export const PageLanding = () => {
   const { proStatus } = useSelector((state) => state.ProReducer);
   const navigate = useNavigate();
 
   useEffect(() => {
-    if (!proStatus) {
-      navigate("/");
+    if (proStatus) {
+      navigate("/pro");
     }
   }, [proStatus]);
 
   return (
     <main>
-      {/* Ваша цель */}
-      {/* Калькулятор воды */}
-      <Nutritios />
+      <ProSection />
     </main>
   );
 };

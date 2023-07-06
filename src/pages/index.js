@@ -1,5 +1,6 @@
 import { PageCategory } from "./PageCategory"
-import { PageHome } from "./PageHome"
-import { PageProHome } from "./PageProHome";
+import { PageLanding } from "./PageLanding/PageLanding"
+import { PageProLanding } from "./PageProLanding/PageProLanding";
+import { PageBuy } from './PageBuy/PageBuy'
 
-export { PageCategory, PageHome, PageProHome }
+export { PageCategory, PageLanding, PageProLanding, PageBuy }

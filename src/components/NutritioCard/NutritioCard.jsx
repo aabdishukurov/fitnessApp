@@ -1,8 +1,9 @@
-import style from "./Nutritio.module.scss";
+import style from "./NutritioCard.module.scss";
 
-import star from "../../../assets/star.svg";
+import star from "../../assets/star.svg";
+import { Link } from "react-router-dom";
 
-export const Nutritio = ({ info }) => {
+export const NutritioCard = ({ info }) => {
   const renderStars = (count) => {
     const Stars = [];
     for (let i = 0; i < count; i++) {
@@ -34,7 +35,9 @@ export const Nutritio = ({ info }) => {
           Рейтинг
           <ul className={style.stars}>{renderStars(info.raiting)}</ul>
         </div>
-        <button className={style.button}>Связаться</button>
+        <Link className={style.button} to={`/nutritio/${info.id}`}>
+          Связаться
+        </Link>
       </div>
     </li>
   );
