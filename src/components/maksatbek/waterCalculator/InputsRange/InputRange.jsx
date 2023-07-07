@@ -12,7 +12,7 @@ const InputRange = () => {
 
     const handleChangeActive = (e) => {
         setActive(e.target.value)
-        setTotal(Math.floor(active + weight) / 2)
+        setTotal(Math.floor(weight + active) / 2)
     }
 
     return (
