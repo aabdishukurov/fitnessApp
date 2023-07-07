@@ -20,7 +20,9 @@ const WaterCalculator = () => {
                 </div>
             </div>
            <div className={style.settings}>
-            <button className={style.settingsBtn}>настроить уведомления</button>
+            <button className={style.settingsBtn}>
+                <p>настроить уведомления</p>
+                </button>
            </div>
         </div>
     );

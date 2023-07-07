@@ -8,8 +8,10 @@
    .settings{
     width: 392px;
     margin: 180px auto 0;
-    
+   
     .settingsBtn{
+      display: flex;
+      align-items: center;
       border: none;
       border-radius: 20px;
       width: 392px;
@@ -19,13 +21,19 @@
       font-weight: 700;
       font-size: 20px;
       cursor: pointer;
+      p{
+        margin: 0 auto;
+        text-align: center;
+        width: 360px;
+        font-weight: 700;
+        font-size: 20px;
+      }
     }
     .settingsBtn::after{
       content:'';
       background-image:url('../../../assets/water/ooui_next-ltr.svg') ;
       width: 20px;
       height: 20px;
-      display: inline-block;
     }
   }
   }
