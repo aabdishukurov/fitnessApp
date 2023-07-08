@@ -1,6 +1,7 @@
 import style from "./ProSection.module.scss";
 import { ProCard } from "../index";
 import { useSelector } from "react-redux";
+import { ProLogo } from "../../UI/ProLogo/ProLogo";
 
 export const ProSection = () => {
   const cardsInfo = [
@@ -33,13 +34,7 @@ export const ProSection = () => {
     <section className={style.pro}>
       <div className={style.container}>
         <div className={style.pro__content}>
-          <div className={`${style.pro__logo} ${style.logo}`}>
-            <span className={style.logo__name}>FitBreak</span>
-            <div className={style.logo__pro}>
-              <i className={style.logo__icon} />
-              PRO
-            </div>
-          </div>
+          <ProLogo className={style.pro__logo} />
           <div className={style.pro__text}>
             <p className={style.pro__paragraph}>
               <span className={style.pro__accent}>

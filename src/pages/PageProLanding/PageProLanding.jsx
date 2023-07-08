@@ -1,5 +1,5 @@
 import { useSelector } from "react-redux";
-import { NutritiosSection } from "../../components";
+import { NutritiosSection, ProHero } from "../../components";
 import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 
@@ -15,6 +15,7 @@ export const PageProLanding = () => {
 
   return (
     <main>
+      <ProHero />
       {/* Ваша цель */}
       {/* Калькулятор воды */}
       <NutritiosSection />

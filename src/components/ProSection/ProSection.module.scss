@@ -5,43 +5,6 @@
   margin: 0 auto;
 }
 
-.logo {
-  &__name {
-    font-weight: 700;
-    font-size: 45px;
-    line-height: 55px;
-    font-family: sans-serif;
-    background: $gradient-blue;
-    background-clip: text;
-    color: transparent;
-  }
-
-  &__pro {
-    font-family: "Kulim Park";
-    font-weight: 700;
-    font-size: 40px;
-    line-height: 45px;
-    background: $gradient-orange;
-    border-radius: 20px;
-    color: $white;
-    padding-left: 13px;
-    padding-right: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 10px;
-  }
-
-  &__icon {
-    height: .75em;
-    background-image: url("../../assets/diamond.svg");
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
-    width: .75em;
-  }
-}
-
 .pro {
   margin-top: 40px;
   margin-bottom: 174px;
@@ -50,16 +13,12 @@
     flex-direction: column;
   }
   &__logo {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    padding: 15px;
+    padding: 15px 25px 15px 15px;
     border: 1px solid $dark-blue;
     border-top: none;
     border-bottom: none;
-    margin: 0 auto;
+    margin: 0 auto 100px;
     align-self: center;
-    margin-bottom: 100px;
   }
   &__text {
     font-weight: 400;
@@ -89,4 +48,3 @@
     gap: 60px;
   }
 }
-

@@ -51,21 +51,33 @@ export const PageNutritio = () => {
               {renderStars(currentNutritio.raiting)}
             </ul>
           </div>
-          <div className={style.contacts}>
+          <a className={style.contacts}>
             <p className={style.title}>Контакты</p>
-            <div className={style.tel}>
+            <a
+              href={`tel:${currentNutritio.contacts?.telephone}`}
+              target="_blank"
+              className={style.tel}
+            >
               <i className={`${style.tel__icon} ${style.icon}`}></i>
               {currentNutritio.contacts?.telephone}
-            </div>
-            <div className={style.whatsapp}>
+            </a>
+            <a
+              href={`https://wa.me/${currentNutritio.contacts?.whattsapp}`}
+              target="_blank"
+              className={style.whatsapp}
+            >
               <i className={`${style.whatsapp__icon} ${style.icon}`}></i>
               {currentNutritio.contacts?.whattsapp}
-            </div>
-            <div className={style.inst}>
+            </a>
+            <a
+              href={`https://www.instagram.com/${currentNutritio.contacts?.instagram}`}
+              target="_blank"
+              className={style.inst}
+            >
               <i className={`${style.inst__icon} ${style.icon}`}></i>
               {currentNutritio.contacts?.instagram}
-            </div>
-          </div>
+            </a>
+          </a>
         </div>
       </div>
     </main>

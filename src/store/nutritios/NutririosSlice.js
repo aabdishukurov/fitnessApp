@@ -18,7 +18,7 @@ const initialState = {
       raiting: 5,
       contacts: {
         telephone: "+1 (123) 697-8973",
-        whattsapp: "+1 (123) 697-8973",
+        whattsapp: "11236978973",
         instagram: "@caustic_exorcism_82",
       },
     },
@@ -33,7 +33,7 @@ const initialState = {
       raiting: 3,
       contacts: {
         telephone: "+1 (123) 697-8973",
-        whattsapp: "+1 (123) 697-8973",
+        whattsapp: "11236978973",
         instagram: "@caustic_exorcism_82",
       },
     },
@@ -48,7 +48,7 @@ const initialState = {
       raiting: 5,
       contacts: {
         telephone: "+1 (123) 697-8973",
-        whattsapp: "+1 (123) 697-8973",
+        whattsapp: "11236978973",
         instagram: "@caustic_exorcism_82",
       },
     },

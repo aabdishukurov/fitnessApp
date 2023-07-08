@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Kulim+Park:wght@700&family=Montserrat:wght@400;500;600;700&display=swap');
-@import './variables.scss';
+@import url("https://fonts.googleapis.com/css2?family=Kulim+Park:wght@700&family=Montserrat:wght@400;500;600;700&display=swap");
+@import "./variables.scss";
 
 * {
   margin: 0;
@@ -8,9 +8,7 @@
 }
 
 body {
-  font-family: 'Montserrat', sans-serif;
-  width: 90%;
-  margin: 0 auto;
+  font-family: "Montserrat", sans-serif;
 }
 
 ul {
