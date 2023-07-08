@@ -61,22 +61,5 @@
   height: 40px;
 }
 .button {
-  display: inline-block;
-  text-decoration: none;
-  border-radius: 20px;
-  border: none;
-  background: $gradient-blue;
   padding: 18px 80px;
-  color: $white;
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 24px;
-  cursor: pointer;
-  transition: 0.5s;
-  &:hover {
-    box-shadow: 0px 0px 20px 0px $dark-blue;
-  }
-  &:active {
-    background: linear-gradient(90deg, #0e3971 0%, #103c77 0%, #46b0ed 100%);
-  }
 }

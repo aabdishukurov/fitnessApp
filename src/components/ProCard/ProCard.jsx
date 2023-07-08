@@ -5,12 +5,12 @@ export const ProCard = ({ info, className }) => {
   return (
     <li className={`${className} ${style.card} `}>
       <div className={style.card__title}>
-        <b>FitBreak</b> {info.title}
+        <b>FitBreak</b> {info.name}
       </div>
       <ul className={style.card__list}>
-        {info.props.map((prop) => (
-          <li className={style.card__item} key={prop}>
-            {prop}
+        {info.goods.map((good, i) => (
+          <li className={style.card__item} key={i}>
+            {good}
           </li>
         ))}
       </ul>

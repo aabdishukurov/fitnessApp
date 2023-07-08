@@ -2,6 +2,7 @@ import style from "./NutritioCard.module.scss";
 
 import star from "../../assets/star.svg";
 import { Link } from "react-router-dom";
+import { BlueButton } from "../../UI/index";
 
 export const NutritioCard = ({ info }) => {
   const renderStars = (count) => {
@@ -35,8 +36,8 @@ export const NutritioCard = ({ info }) => {
           Рейтинг
           <ul className={style.stars}>{renderStars(info.raiting)}</ul>
         </div>
-        <Link className={style.button} to={`/nutritio/${info.id}`}>
-          Связаться
+        <Link to={`/nutritio/${info.id}`}>
+          <BlueButton className={style.button}>Связаться</BlueButton>
         </Link>
       </div>
     </li>

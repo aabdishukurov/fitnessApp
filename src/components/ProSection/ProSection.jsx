@@ -3,7 +3,31 @@ import { ProCard } from "../index";
 import { useSelector } from "react-redux";
 
 export const ProSection = () => {
-  const { nutritiosArray } = useSelector((state) => state.NutririosReducer);
+  const cardsInfo = [
+    {
+      name: "Bronze",
+      goods: [
+        "        Медитации",
+        "Дыхательные гимнастики",
+        "Ранги и уровни",
+        "Персональная статистика",
+      ],
+      price: "$ 0.00/ мес.",
+    },
+    {
+      name: "Gold",
+      goods: [
+        "        Медитации",
+        "Дыхательные гимнастики",
+        "Ранги и уровни",
+        "Персональная статистика",
+        "Гидрализация",
+        "Отслеживание шагов к цели",
+        "Нутрициология",
+      ],
+      price: "$ 1.99/ мес.",
+    },
+  ];
 
   return (
     <section className={style.pro}>
@@ -34,7 +58,7 @@ export const ProSection = () => {
             </p>
           </div>
           <ul className={style.pro__cards}>
-            {nutritiosArray.map((card) => (
+            {cardsInfo.map((card) => (
               <ProCard info={card} key={card.id} className={style.pro__card} />
             ))}
           </ul>

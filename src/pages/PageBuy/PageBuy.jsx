@@ -2,6 +2,7 @@ import style from "./PageBuy.module.scss";
 import { useDispatch, useSelector } from "react-redux";
 import { getPro } from "../../store/pro/proSlice";
 import { Navigate, useNavigate } from "react-router-dom";
+import { BlueButton } from "../../UI";
 
 export const PageBuy = () => {
   const { proStatus } = useSelector((state) => state.ProReducer);
@@ -47,9 +48,9 @@ export const PageBuy = () => {
           </div>
         </form>
 
-        <button onClick={buyPro} className={style.button}>
+        <BlueButton onClick={buyPro} className={style.button}>
           Продолжить
-        </button>
+        </BlueButton>
       </div>
     </main>
   );
