@@ -92,31 +92,26 @@ const FormRegister = ({ handleClick }) => {
         username: userName,
         password,
       };
-      console.log("userData", userData);
       dispatch(registerUser(userData));
 
       if (isAuthenticated) {
-        navigate("/pro");
+        navigate("/");
       }
     }
   };
 
   const validateEmail = (input) => {
-    // Регулярное выражение для проверки валидности адреса электронной почты
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return emailRegex.test(input);
   };
 
   const validatePassword = (input) => {
-    // Валидация пароля: должен содержать минимум 8 символов
-    // и хотя бы одну букву верхнего регистра и одну цифру
     const passwordRegex = /^(?=.*[A-Z])(?=.*\d).{8,}$/;
     return passwordRegex.test(input);
   };
 
   const validateName = (input) => {
-    // Валидация имени: должно содержать только буквы и пробелы
-    const nameRegex = /^[a-zA-Z\s]+$/;
+    const nameRegex = /^[a-zA-Z\s].{3,}$/;
     return nameRegex.test(input);
   };
 
@@ -133,7 +128,7 @@ const FormRegister = ({ handleClick }) => {
         </h3>
         <form onSubmit={handleSubmit}>
           <label className={styles.form__label}>
-            Номер телефона или e-mail
+            E-mail
             <Input
               className={styles.form__input}
               type="email"
@@ -142,7 +137,7 @@ const FormRegister = ({ handleClick }) => {
               isValid={isValidEmail}
               handleChange={handleEmailChange}
               brColor={!isValidEmail && "2px solid red"}
-              placeholder={"Введите номер или e-mail"}
+              placeholder={"Введите e-mail"}
             />
             {!isValidEmail && (
               <span>Адрес электронной почты должен содержать символ @</span>
@@ -194,6 +189,9 @@ const FormRegister = ({ handleClick }) => {
                 isValid={isValidName}
                 placeholder="Введите имя"
               />
+              {!isValidName && (
+                <span>Фамилия и Имя должны содержать не менее 4 букв</span>
+              )}
             </label>
             <label className={styles.form__label}>
               Фамилия

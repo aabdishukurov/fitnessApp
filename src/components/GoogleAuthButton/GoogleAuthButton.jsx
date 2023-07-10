@@ -11,7 +11,6 @@ function GoogleAuthButton() {
   const handleGoogleResponse = useGoogleLogin({
     onSuccess: (res) => {
       const { access_token } = res;
-      console.log(res);
       dispatch(googleLogin(access_token));
     },
   });

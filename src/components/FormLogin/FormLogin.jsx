@@ -7,9 +7,10 @@ import BtnAuth from "../BtnAuth";
 import { useAuth } from "../../hooks/use-auth";
 import { useNavigate } from "react-router-dom";
 
+import iconWarn from "../../assets/register/warn-icon.png";
 import logoFit from "../../assets/register/logo_fitbreak.jpg";
 import Yoga from "../../assets/register/yoga.jpg";
-import arrow from "../../assets/register/arrow-right.svg";
+// import arrow from "../../assets/register/arrow-right.svg";
 import styles from "./FormLogin.module.scss";
 
 function LoginForm() {
@@ -23,7 +24,7 @@ function LoginForm() {
   const [isValidEmail, setIsValidEmail] = useState(true);
   const [isValidPassword, setIsValidPassword] = useState(true);
 
-  const { isAuthenticated } = useAuth();
+  const { isAuthenticated, user, error } = useAuth();
   const handleSubmit = (e) => {
     e.preventDefault();
 
@@ -33,8 +34,9 @@ function LoginForm() {
     };
 
     dispatch(loginUser(userData));
+
     if (isAuthenticated) {
-      navigate("/premium");
+      navigate("/");
     }
   };
 
@@ -49,9 +51,6 @@ function LoginForm() {
   const showBtn = () => {
     setIsType(!isType);
   };
-  const handleReset = () => {
-    setPassword("");
-  };
 
   return (
     <div className={styles.formLogin}>
@@ -65,6 +64,12 @@ function LoginForm() {
         <h3 className={styles.formLogin__subtitle}>
           FitBreak - ваш источник сил и энергии!
         </h3>
+        {error && (
+          <span>
+            <img src={iconWarn} alt="warn" />
+            неверный логин или пароль
+          </span>
+        )}
         <form onSubmit={handleSubmit}>
           <label className={styles.formLogin__label}>
             Логин
@@ -76,29 +81,21 @@ function LoginForm() {
               placeholder={"Введите e-mail"}
               isValid={isValidEmail}
               handleChange={handleEmailChange}
-              brColor={!isValidEmail && "2px solid red"}
             />
-            {!isValidPassword && <span>неверный логин</span>}
           </label>
           <label className={styles.formLogin__label}>
             Пароль
             <Input
               className={styles.formLogin__input}
               type={isType ? "password" : "text"}
-              // pattern={pattern}
               title="Должно содержать по крайней мере одно число, одну заглавную и строчную буквы, а также не менее 8 и более символов"
               value={password}
               handleChange={handlePasswordChange}
-              brColor={!isValidPassword && "2px solid red"}
-              placeholder={"Введите пароль "}
+              placeholder={"Введите пароль"}
+              autocomplete="current-password"
             />
-            {!isValidPassword && <span>неверный пароль</span>}
-            <b onClick={handleReset} className={styles.formLogin__reset}>
-              очистить поле <img src={arrow} alt="arrow right" />
-            </b>
             <BtnHide showBtn={showBtn} isType={isType} />
           </label>
-
           <div className={styles.formLogin__wrapperBtns}>
             <BtnAuth value={"Зарегистрироваться"} to={"/register"} />
             <BtnAuth value={"Войти"} />

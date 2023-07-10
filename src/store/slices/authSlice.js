@@ -35,8 +35,7 @@ export const loginUser = createAsyncThunk(
           },
         }
       );
-      console.log(response);
-      return response.data;
+      return response;
     } catch (error) {
       throw error.response.data;
     }
@@ -83,7 +82,6 @@ const authSlice = createSlice({
       .addCase(registerUser.fulfilled, (state, action) => {
         state.isLoading = false;
         state.isAuthenticated = true;
-
         state.user = action.payload;
       })
       .addCase(registerUser.rejected, (state, action) => {
@@ -97,13 +95,13 @@ const authSlice = createSlice({
       .addCase(loginUser.fulfilled, (state, action) => {
         state.isLoading = false;
         state.isAuthenticated = true;
-        state.user = action.payload.user;
+        state.user = action.payload;
         state.token = action.payload.token;
         Cookies.set("token", action.payload.token);
       })
       .addCase(loginUser.rejected, (state, action) => {
         state.isLoading = false;
-        state.error = action.error.message;
+        state.error = action.error;
       })
       // .addCase(logoutUser.pending, (state) => {
       //   state.isLoading = true;

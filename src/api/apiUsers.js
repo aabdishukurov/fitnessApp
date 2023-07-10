@@ -13,20 +13,19 @@ const checkTokenInterceptor = (config) => {
   return config;
 };
 
-const responseSuccessInterceptor = (response) => {
-  const data = response.data;
-  if (!data._meta.success) {
-    return { error: data.result };
-  }
-  return { response: data };
-};
+// const responseSuccessInterceptor = (response) => {
+//   const data = response.data;
+//   if (!data._meta.success) {
+//     return { error: data.result };
+//   }
+//   return { response: data };
+// };
 const networkErrorInterceptor = (error) => {
-  const responseError = error?.response?.data;
-  return { error: responseError || error };
+  console.error(error);
 };
 api.interceptors.request.use(checkTokenInterceptor);
 api.interceptors.response.use(
-  responseSuccessInterceptor,
+  // responseSuccessInterceptor,
   networkErrorInterceptor
 );
 
