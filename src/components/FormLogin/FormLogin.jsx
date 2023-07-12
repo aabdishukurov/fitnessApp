@@ -6,12 +6,14 @@ import Input from "../Input";
 import BtnAuth from "../BtnAuth";
 import { useAuth } from "../../hooks/use-auth";
 import { useNavigate } from "react-router-dom";
-
+import { signInWithEmailAndPassword } from "firebase/auth";
+import { auth } from "../../firebase";
 import iconWarn from "../../assets/register/warn-icon.png";
 import logoFit from "../../assets/register/logo_fitbreak.jpg";
 import Yoga from "../../assets/register/yoga.jpg";
 // import arrow from "../../assets/register/arrow-right.svg";
 import styles from "./FormLogin.module.scss";
+import { setUser } from "../../store/slices/authUser";
 
 function LoginForm() {
   const dispatch = useDispatch();
@@ -20,24 +22,33 @@ function LoginForm() {
   const [isType, setIsType] = useState(true);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-
+  const [error, setError] = useState(null);
   const [isValidEmail, setIsValidEmail] = useState(true);
   const [isValidPassword, setIsValidPassword] = useState(true);
 
-  const { isAuthenticated, user, error } = useAuth();
+  const { isAuth } = useAuth();
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    const userData = {
-      email,
-      password,
-    };
+    signInWithEmailAndPassword(auth, email, password)
+      .then((userCredential) => {
+        const user = userCredential.user;
+        console.log(user);
+        dispatch(
+          setUser({
+            email: user.email,
+            token: user.accessToken,
+            id: user.uid,
+          })
+        );
+        console.log(user);
 
-    dispatch(loginUser(userData));
-
-    if (isAuthenticated) {
-      navigate("/");
-    }
+        navigate("/");
+      })
+      .catch((error) => {
+        console.error(error);
+        setError(error);
+      });
   };
 
   const handleEmailChange = (event) => {

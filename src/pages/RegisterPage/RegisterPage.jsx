@@ -4,12 +4,12 @@ import styles from "./RegisterPage.module.scss";
 import Loader from "../../components/Loader";
 import { useAuth } from "../../hooks/use-auth";
 const RegisterPage = () => {
-  const { isLoading } = useAuth();
+  const { isAuth } = useAuth();
 
   return (
     <>
       <div className={styles.registerPage}>
-        {!isLoading ? <FormRegister /> : <Loader />}
+        <FormRegister />
       </div>
     </>
   );
