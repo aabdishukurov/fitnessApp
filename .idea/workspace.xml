@@ -5,9 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8ddfe665-b9d1-49df-affc-c9d43603b90d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/assets/infoExercises/eyes.mp4" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/infoExercises/eyes2.mp4" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/InfoExercises/InfoExercises.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/InfoExercises/InfoExercises.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,7 +28,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/Amin_stors/Desktop/GeekTech/FitBreak",
+    "last_opened_file_path": "C:/Users/Amin_stors/Desktop/GeekTech/dopProject/test",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -54,6 +52,7 @@
       <updated>1689325661561</updated>
       <workItem from="1689325663482" duration="101000" />
       <workItem from="1689330087956" duration="413000" />
+      <workItem from="1689332261709" duration="375000" />
     </task>
     <servers />
   </component>
