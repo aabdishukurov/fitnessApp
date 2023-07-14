@@ -46,4 +46,3 @@ export const Button = () => {
 //     </button>
 //   );
 // };
-// >>>>>>>> 1a4627ae5629d5a21e0094b636b5c3bd2195c439:src/components/UI/Button.jsx

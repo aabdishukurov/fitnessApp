@@ -1,7 +1,7 @@
-import React from 'react';
-import styles from './categories.module.scss';
-import { Button } from './button/Button';
-import { Link } from 'react-router-dom';
+import React from "react";
+import styles from "./categories.module.scss";
+import { Button } from "./button/Button";
+import { Link } from "react-router-dom";
 
 export const Category = ({
   className,
