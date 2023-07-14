@@ -7,6 +7,8 @@ import WaterCalculator from "./components/maksatbek/waterCalculator/WaterCalcula
 import { PageCategory } from "./pages";
 import RegisterPage from "./pages/RegisterPage";
 import LoginPage from "./pages/LoginPage";
+import Layout from './components/Layout';
+import LandingPage from './pages/LandingPage';
 
 function App() {
   const clientId =
@@ -20,6 +22,8 @@ function App() {
             <Route path="/login" element={<LoginPage />} />
             <Route index element={<WaterCalculator />} />
             <Route path={`/categories`} element={<PageCategory />} />
+            <Route path={'/'} element={<Layout />} />
+            <Route path='/' element={<LandingPage />} />
           </Routes>
         </Provider>
       </GoogleOAuthProvider>
