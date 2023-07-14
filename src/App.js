@@ -11,7 +11,13 @@ import Layout from "./components/Layout";
 import LandingPage from "./pages/LandingPage";
 import { PageCategory } from "./pages/Category/PageCategory";
 import { InfoExercises } from "./pages/InfoExercises/InfoExercises";
-import { PageHome, PageProHome } from "./pages";
+import {
+  PageHome,
+  PageProHome,
+  PageProfileNotifications,
+  PageProfileStatistics,
+  PageProfile,
+} from "./pages";
 import Timer from "./components/timer/Timer";
 import ExerPage from "./pages/exerPage/ExerPage";
 function App() {
@@ -37,6 +43,12 @@ function App() {
             <Route path={`/timer`} element={<Timer />} />
             <Route path={`/ex`} element={<ExerPage test={test} />} />
             <Route path={`/pro`} element={<PageProHome />} />
+            <Route path={`/profile`} element={<PageProfile />} />
+            <Route
+              path={`/notifications`}
+              element={<PageProfileNotifications />}
+            />
+            <Route path={`/statistics`} element={<PageProfileStatistics />} />
           </Routes>
         </Provider>
       </GoogleOAuthProvider>

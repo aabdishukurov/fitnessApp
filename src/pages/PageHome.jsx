@@ -1,5 +1,4 @@
-import { Pro } from "../components";
-import Timer from "../components/timer/Timer";
+import { Pro } from "../components/";
 
 export const PageHome = () => {
   return (
