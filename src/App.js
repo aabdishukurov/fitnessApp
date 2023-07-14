@@ -10,7 +10,6 @@ import LoginPage from "./pages/LoginPage";
 import Layout from "./components/Layout";
 import LandingPage from "./pages/LandingPage";
 import { PageCategory } from "./pages/Category/PageCategory";
-import { Categories } from "./components";
 import { InfoExercises } from "./pages/InfoExercises/InfoExercises";
 import { PageHome, PageProHome } from "./pages";
 import Timer from "./components/timer/Timer";
