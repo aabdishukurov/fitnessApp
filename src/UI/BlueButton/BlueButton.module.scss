@@ -1,0 +1,45 @@
+@import "../../styles/variables.scss";
+
+.button {
+  display: inline-block;
+  position: relative;
+  text-decoration: none;
+  border-radius: 20px;
+  border: none;
+  background: $gradient-blue;
+  color: $white;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  cursor: pointer;
+  transition: 0.2s;
+  &:hover {
+    box-shadow: 0px 0px 20px 0px $dark-blue;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    border-radius: 20px;
+    background: linear-gradient(
+      90deg,
+      #0e3971 -1.17%,
+      #103c77 -1.17%,
+      #46b0ed 105.65%
+    );
+
+    opacity: 0;
+    transition: all 0.2s ease-in-out;
+  }
+  &:active:after {
+    opacity: 1;
+  }
+  i {
+    font-style: normal;
+    position: relative;
+    z-index: 999;
+  }
+}

@@ -13,20 +13,10 @@ const checkTokenInterceptor = (config) => {
   return config;
 };
 
-// const responseSuccessInterceptor = (response) => {
-//   const data = response.data;
-//   if (!data._meta.success) {
-//     return { error: data.result };
-//   }
-//   return { response: data };
-// };
 const networkErrorInterceptor = (error) => {
   console.error(error);
 };
 api.interceptors.request.use(checkTokenInterceptor);
-api.interceptors.response.use(
-  // responseSuccessInterceptor,
-  networkErrorInterceptor
-);
+api.interceptors.response.use(networkErrorInterceptor);
 
 export default api;

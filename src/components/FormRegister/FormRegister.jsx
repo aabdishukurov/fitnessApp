@@ -1,8 +1,6 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { registerUser } from "../../store/slices/authSlice";
-import { useAuth } from "../../hooks/use-auth";
 import logoFit from "../../assets/register/logo_fitbreak.jpg";
 import Yoga from "../../assets/register/yoga.jpg";
 import styles from "./FormRegister.module.scss";
@@ -11,13 +9,10 @@ import BtnHide from "../BtnHide";
 import Input from "../Input";
 import BtnAuth from "../BtnAuth";
 import GoogleAuthButton from "../GoogleAuthButton";
-import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
-import { setUser } from "../../store/slices/authUser";
-import Cookies from "js-cookie";
+import { registerUser } from "../../store/slices/authUser";
+
 import Loader from "../Loader";
 const FormRegister = () => {
-  const auth = getAuth();
-  const { isAuth } = useAuth();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
@@ -30,7 +25,10 @@ const FormRegister = () => {
   const [isValidEmail, setIsValidEmail] = useState(true);
   const [isValidPassword, setIsValidPassword] = useState(true);
   const [isValidConfirmPassword, setIsValidConfirmPassword] = useState(true);
-  const [isLoading, setIsLoading] = useState(false);
+
+  const { isLoading, isAuthenticated, error } = useSelector(
+    (state) => state.auth
+  );
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
@@ -80,7 +78,13 @@ const FormRegister = () => {
     setName("");
   };
 
-  const handleSubmit = (e) => {
+  useEffect(() => {
+    if (isAuthenticated) {
+      navigate("/");
+    }
+  }, [isAuthenticated, navigate]);
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
     if (
@@ -89,30 +93,8 @@ const FormRegister = () => {
       isValidConfirmPassword &&
       isValidName
     ) {
-      const displayName = userName;
-      createUserWithEmailAndPassword(auth, email, password, displayName)
-        .then((userCredential) => {
-          const user = userCredential.user;
-          user && setIsLoading(true);
-          Cookies.set(user.accessToken);
-          if (user) {
-            dispatch(
-              setUser({
-                userName,
-                email: user.email,
-                id: user.uid,
-                token: user.accessToken,
-              })
-            );
-            resetForm();
-            if (user) {
-              navigate("/");
-            }
-          }
-        })
-        .catch((error) => {
-          console.log(error);
-        });
+      dispatch(registerUser({ email, password }));
+      resetForm();
     }
   };
 
@@ -163,6 +145,10 @@ const FormRegister = () => {
                       Адрес электронной почты должен содержать символ @
                     </span>
                   )}
+                  {error === "Firebase: Error (auth/email-already-in-use)." &&
+                    !email && (
+                      <span>Пользователь с таким email уже существует</span>
+                    )}
                 </label>
 
                 <label className={styles.form__label}>
