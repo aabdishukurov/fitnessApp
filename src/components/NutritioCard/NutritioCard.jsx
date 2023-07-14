@@ -2,7 +2,7 @@ import style from "./NutritioCard.module.scss";
 
 import star from "../../assets/star.svg";
 import { Link } from "react-router-dom";
-import { BlueButton } from "../../UI/index";
+import { BlueButton } from "../../UI/BlueButton/BlueButton";
 
 export const NutritioCard = ({ info }) => {
   const renderStars = (count) => {

@@ -37,7 +37,7 @@ export const registerUser = createAsyncThunk(
         password
       );
       const { email: userEmail, uid: id, accessToken } = userCredential.user;
-      return { userEmail, accessToken, id };
+      return { userEmail, accessToken, id, userName };
     } catch (error) {
       console.error(error);
       rejectWithValue(error, "error");
@@ -107,6 +107,7 @@ const userSlice = createSlice({
       state.email = action.payload.userEmail;
       state.id = action.payload.id;
       Cookies.set("user_token", action.payload.accessToken);
+      Cookies.set("userName", action.payload.userName);
     });
     builder.addCase(loginUser.rejected, (state, action) => {
       state.isLoading = false;
@@ -122,6 +123,7 @@ const userSlice = createSlice({
       state.email = action.payload.userEmail;
       state.id = action.payload.id;
       Cookies.set("user_token", action.payload.accessToken);
+      Cookies.set("userName", action.payload.userName);
     });
     builder.addCase(registerUser.rejected, (state, action) => {
       state.isLoading = false;
@@ -131,9 +133,11 @@ const userSlice = createSlice({
       state.isLoading = true;
       state.error = null;
     });
-    builder.addCase(googleLogin.fulfilled, (state) => {
+    builder.addCase(googleLogin.fulfilled, (state, action) => {
       state.isLoading = false;
       state.isAuthenticated = true;
+      Cookies.set("user_token", action.payload.accessToken);
+      Cookies.set("userName", action.payload.displayName);
     });
     builder.addCase(googleLogin.rejected, (state, action) => {
       state.isLoading = false;

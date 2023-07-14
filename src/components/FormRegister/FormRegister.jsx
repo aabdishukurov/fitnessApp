@@ -93,7 +93,7 @@ const FormRegister = () => {
       isValidConfirmPassword &&
       isValidName
     ) {
-      dispatch(registerUser({ email, password }));
+      dispatch(registerUser({ email, password, userName }));
       resetForm();
     }
   };

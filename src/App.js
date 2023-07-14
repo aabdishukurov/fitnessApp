@@ -12,14 +12,18 @@ import LandingPage from "./pages/LandingPage";
 import { PageCategory } from "./pages/Category/PageCategory";
 import { InfoExercises } from "./pages/InfoExercises/InfoExercises";
 import {
-  PageHome,
-  PageProHome,
   PageProfileNotifications,
   PageProfileStatistics,
   PageProfile,
+  PageBuy,
+  PageProLanding,
+  PageNutritio,
 } from "./pages";
 import Timer from "./components/timer/Timer";
-import ExerPage from "./pages/exerPage/ExerPage";
+import ExerPage from "./pages/ExerPage/ExerPage";
+import NavBar from "./components/NavBar";
+import Footer from "./components/Footer";
+import "./styles/index.scss";
 function App() {
   const test = {
     name: "Глаз",
@@ -34,21 +38,23 @@ function App() {
           <Routes>
             <Route path="/register" element={<RegisterPage />} />
             <Route path="/login" element={<LoginPage />} />
-            <Route index element={<WaterCalculator />} />
-            <Route path={`/categories`} element={<PageCategory />} />
-            <Route path={"/"} element={<Layout />} />
-            <Route path="/" element={<LandingPage />} />
-            <Route path="/InfoExercises/:id" element={<InfoExercises />} />
-            <Route path={`/`} element={<PageHome />} />
-            <Route path={`/timer`} element={<Timer />} />
-            <Route path={`/ex`} element={<ExerPage test={test} />} />
-            <Route path={`/pro`} element={<PageProHome />} />
-            <Route path={`/profile`} element={<PageProfile />} />
-            <Route
-              path={`/notifications`}
-              element={<PageProfileNotifications />}
-            />
-            <Route path={`/statistics`} element={<PageProfileStatistics />} />
+            <Route path="/" element={<Layout />}>
+              {/* <Route index element={<WaterCalculator />} /> */}
+              <Route path={`/categories`} element={<PageCategory />} />
+              <Route path="/" element={<LandingPage />} />
+              <Route path="/InfoExercises/:id" element={<InfoExercises />} />
+              <Route path={`/timer`} element={<Timer />} />
+              <Route path={`/ex`} element={<ExerPage test={test} />} />
+              <Route path={`/buyPro`} element={<PageBuy />} />
+              <Route path={`/profile`} element={<PageProfile />} />
+              <Route
+                path={`/notifications`}
+                element={<PageProfileNotifications />}
+              />
+              <Route path={`/statistics`} element={<PageProfileStatistics />} />
+              <Route path="/pro" element={<PageProLanding />} />
+              <Route path={`/nutritio/:id`} element={<PageNutritio />} />
+            </Route>
           </Routes>
         </Provider>
       </GoogleOAuthProvider>

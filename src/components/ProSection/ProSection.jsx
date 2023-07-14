@@ -7,6 +7,7 @@ export const ProSection = () => {
   const cardsInfo = [
     {
       name: "Bronze",
+      id: 1,
       goods: [
         "        Медитации",
         "Дыхательные гимнастики",
@@ -17,6 +18,7 @@ export const ProSection = () => {
     },
     {
       name: "Gold",
+      id: 2,
       goods: [
         "        Медитации",
         "Дыхательные гимнастики",
