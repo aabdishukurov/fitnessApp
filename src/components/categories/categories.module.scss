@@ -1,7 +1,14 @@
 @import '../../styles/variables.scss';
 
 .categories {
-  padding: 50px 0;
+<<<<<<< HEAD:src/styles/components/_categories.scss
+    padding: 50px 0;
+    width: 1100px;
+    margin: 0 auto;
+    &__without-flex-direction {
+      padding: 60px 0 60px 0;
+=======
+  padding: 10px 0;
   width: 1100px;
   margin: 0 auto;
   &__without_flex_direction {
@@ -17,96 +24,160 @@
     flex-direction: row-reverse;
     align-items: center;
   }
+  &__blue_line_left {
+    margin-left: -120px;
+    display: flex;
+    justify-content: start;
+  }
+  &__blue_line_right {
+    margin-left: 677px;
+    display: flex;
+    justify-content: start;
+  }
+  &__blue_line_center {
+    display: flex;
+    justify-content: center;
+  }
   &__text_side {
     .text_side__name {
+>>>>>>> 32828fa07c53bad885685dd4fa2a1a7e32952ed7:src/components/categories/categories.module.scss
       display: flex;
+      justify-content: space-between;
       align-items: center;
-      gap: 20px;
-      h3 {
-        font-weight: 700;
-        font-size: 30px;
-        color: $black;
-      }
-      p {
-        font-weight: 400;
-        font-size: 25px;
-        color: $black;
+    }
+    &__with-flex-direction {
+      padding: 60px 0 60px 0;
+      display: flex;
+      justify-content: space-between;
+      flex-direction: row-reverse;
+      align-items: center;
+    }
+    &__text-side {
+      .text-side__name {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        h3 {
+          font-weight: 700;
+          font-size: 30px;
+          color: $black;
+        }
+        p {
+          font-weight: 400;
+          font-size: 25px;
+          color: $black;
+        }
       }
     }
+<<<<<<< HEAD:src/styles/components/_categories.scss
+    &__pros-side {
+      padding: 20px 0;
+=======
   }
   &__pros_side {
     padding: 20px 0;
     div {
       display: flex;
       gap: 15px;
+>>>>>>> 32828fa07c53bad885685dd4fa2a1a7e32952ed7:src/components/categories/categories.module.scss
       div {
-        margin-bottom: 35px;
-        position: relative;
+        display: flex;
+        gap: 15px;
+        div {
+          margin-bottom: 35px;
+          position: relative;
+          width: 30px;
+          height: 30px;
+          border: 1px solid $blue;
+          background: $gradient-blue;
+          border-radius: 50%;
+          span {
+            position: absolute;
+            top: 27px;
+            left: 14px;
+            width: 1px;
+            height: 40px;
+            transform: rotate(180deg);
+            background: $gradient-blue;
+          }
+        }
+        p {
+          font-weight: 500;
+          font-size: 23px;
+        }
+      }
+    }
+    &__link {
+      div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
         width: 30px;
         height: 30px;
-        border: 1px solid $blue;
-        background: $gradient-blue;
         border-radius: 50%;
-        span {
-          position: absolute;
-          top: 27px;
-          left: 14px;
-          width: 1px;
-          height: 40px;
-          transform: rotate(180deg);
-          background: $gradient-blue;
-        }
-      }
-      p {
-        font-weight: 500;
-        font-size: 23px;
-      }
-    }
-  }
-  &__link {
-    div {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 30px;
-      height: 30px;
-      border-radius: 50%;
-      background: $white;
-      transition: 0.2s all;
-      svg {
-        margin-left: 2px;
-        path {
-          fill: $blue;
-        }
-      }
-    }
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    background: $blue;
-    border-radius: 25px;
-    font-weight: 700;
-    font-size: 20px;
-    color: $white;
-    padding: 12px;
-    border: 3px solid $blue;
-    cursor: pointer;
-    transition: 0.2s all;
-    &:hover {
-      div {
-        background: $blue;
+        background: $white;
+        transition: 0.2s all;
         svg {
+          margin-left: 2px;
           path {
-            fill: $white;
+            fill: $blue;
           }
         }
       }
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      background: $blue;
+      border-radius: 25px;
+      font-weight: 700;
+      font-size: 20px;
+      color: $white;
+      padding: 12px;
       border: 3px solid $blue;
-      background: $white;
-      color: $blue;
+      cursor: pointer;
+      transition: 0.2s all;
+      &:hover {
+        div {
+          background: $blue;
+          svg {
+            path {
+              fill: $white;
+            }
+          }
+        }
+        border: 3px solid $blue;
+        background: $white;
+        color: $blue;
+      }
     }
+<<<<<<< HEAD:src/styles/components/_categories.scss
+    a {
+      text-decoration: none;
+    }
+  }
+=======
   }
   a {
     text-decoration: none;
   }
 }
+.button_style {
+  padding: 50px 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  button {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 15px 25px;
+    background: $orange;
+    font-weight: 700;
+    font-size: 25px;
+    color: $white;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+  }
+}
+>>>>>>> 32828fa07c53bad885685dd4fa2a1a7e32952ed7:src/components/categories/categories.module.scss

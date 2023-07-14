@@ -1,0 +1,42 @@
+@import "../../styles/variables.scss";
+
+.timerComponent {
+    width: 750px;
+    height: 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    .timer {
+        background: $gradient-blue;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 64px;
+        line-height: 74px;
+        text-align: center;
+    }
+    .buttons {
+        display: flex;
+        justify-content: space-between;
+    }
+    .timerButton {
+        width: 210px;
+        height: 60px;
+        color: white;
+        border: none;
+        border-radius: 15px;
+        font-size: 30px;
+        font-weight: 500;
+        line-height: 36px;
+        text-align: center;
+        background: $gradient-blue;
+        text-transform: uppercase;
+        font-family: 'Montserrat';
+        cursor: pointer;
+        &:hover{
+            background: linear-gradient(90deg, #0E3971 -1.17%, #103C77 -1.17%, #46B0ED 105.65%);
+        };
+    }
+}

@@ -1,0 +1,52 @@
+@import '../../../../styles/variables.scss';
+
+.select {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  h3 {
+    font-weight: 700;
+    font-size: 30px;
+    background: $gradient-blue;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+.label_top {
+  margin-top: 20px;
+  .checkbox {
+    appearance: none;
+    width: 23px;
+    height: 23px;
+    border: 2px solid $black;
+    border-radius: 50%;
+    background-color: transparent;
+    display: inline-block;
+    position: relative;
+    margin-right: 10px;
+    cursor: pointer;
+    &::before {
+      content: '';
+      background-color: $black;
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(0);
+      width: 13px;
+      height: 13px;
+      border-radius: 50%;
+      transition: all 0.3s ease-in-out;
+    }
+    &:checked::before {
+      transform: translate(-50%, -50%) scale(1);
+    }
+  }
+  .label {
+    font-size: 28px;
+    font-weight: 700;
+    color: $black;
+    cursor: pointer;
+  }
+}

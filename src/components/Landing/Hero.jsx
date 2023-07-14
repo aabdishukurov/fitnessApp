@@ -1,5 +1,9 @@
+<<<<<<< HEAD
 import React from 'react'
 import { Button } from '../UI/Button'
+=======
+import { Button } from '.././ildar/categories/button/Button'
+>>>>>>> 3caee9ff2f8d771088b0a3ffe94f015de3fdd5aa
 import PlayButton from '../UI/PlayButton'
 import AppStoreButton from '../UI/AppStoreButton'
 import PlayStoreButton from '../UI/PlayStoreButton'
