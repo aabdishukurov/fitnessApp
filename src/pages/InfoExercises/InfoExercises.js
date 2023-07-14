@@ -1,15 +1,7 @@
 
 //images
-import eyes from '../../assets/infoExercise/eyes.png'
-import eyes2 from '../../assets/infoExercise/eyes2.png'
-import back from '../../assets/infoExercise/back.png'
-import back2 from '../../assets/infoExercise/back2.png'
-import hands from '../../assets/infoExercise/hands.png'
-import hands2 from '../../assets/infoExercise/hands2.png'
-import legFoot from '../../assets/infoExercise/legFoot.png'
-import legFoot2 from '../../assets/infoExercise/legFoot2.png'
-import shoulderNeck from '../../assets/infoExercise/shoulderNeck.png'
-import shoulderNeck2 from '../../assets/infoExercise/shoulderNeck2.png'
+import eyes from '../../assets/infoExercises/eyes.mp4'
+import eyes2 from '../../assets/infoExercises/eyes2.mp4'
 import timer from '../../assets/categories/timer.png'
 import line from '../../assets/infoExercise/line.png'
 
@@ -114,7 +106,9 @@ export const InfoExercises = () => {
                 {pageInfo.map((item) =>
                     <div className={item.className} key={item.id}>
                         <div className="infoExercise_image">
-                            <img src={item.image} alt={item.alt} />
+                            <video controls>
+                                <source src={item.image} type="video/mp4"/>
+                            </video>
                         </div>
                         <div className="infoExercise_text">
                             <div className="text_name">
@@ -160,7 +154,9 @@ export const InfoExercises = () => {
                 {pageInfo.map((item) =>
                     <div className={item.className} key={item.id}>
                         <div className="infoExercise_image">
-                            <img src={item.image2} alt={item.alt} />
+                            <video controls>
+                                <source src={item.image2} type='video/mp4'/>
+                            </video>
                         </div>
                         <div className="infoExercise_text">
                             <div className="text_name">
