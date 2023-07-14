@@ -11,8 +11,8 @@ import { PageProfileStatistics } from "./PageProfileStatistics";
 
 export {
   PageCategory,
-  PageHome,
   PageProHome,
+  PageHome,
   PageProfile,
   PageProfileNotifications,
   PageProfileStatistics,
