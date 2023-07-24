@@ -1,5 +1,4 @@
 import React from "react";
-import styles from "./Input.module.scss";
 const Input = ({
   title,
   pattern,
@@ -11,6 +10,7 @@ const Input = ({
   className,
   brColor,
   isValid,
+  autocomplete,
 }) => {
   return (
     <>
@@ -26,6 +26,7 @@ const Input = ({
         style={{
           borderBottom: brColor,
         }}
+        autoComplete={autocomplete}
         required
       />
     </>

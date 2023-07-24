@@ -1,0 +1,46 @@
+@import "../../styles/variables";
+
+.container {
+  max-width: 975px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  text-align: center;
+  h2 {
+    border-left: 1px solid $dark-blue;
+    border-right: 1px solid $dark-blue;
+    color: $dark-blue;
+    font-weight: 700;
+    font-size: 45px;
+    line-height: 55px;
+    text-transform: uppercase;
+    margin-bottom: 65px;
+    padding: 15px 25px;
+  }
+}
+
+.nutritos_list {
+  margin-bottom: 100px;
+}
+
+.button {
+  background: $orange;
+  color: $white;
+  border-radius: 15px;
+  border: none;
+  padding: 15px 40px;
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 30px;
+  margin-bottom: 150px;
+  cursor: pointer;
+}

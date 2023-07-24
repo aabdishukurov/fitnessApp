@@ -1,11 +1,19 @@
-import { PageCategory } from "./PageCategory"
-<<<<<<< HEAD
-=======
-import { PageHome } from "./PageHome"
-import { PageProHome } from "./PageProHome";
+import { PageCategory } from "./PageCategory";
+import { PageProLanding } from "./PageProLanding/PageProLanding";
+import { PageBuy } from "./PageBuy/PageBuy";
+import LandingPage from "./LandingPage";
 import { PageProfile } from "./PageProfile";
 import { PageProfileNotifications } from "./PageProfileNotifications";
 import { PageProfileStatistics } from "./PageProfileStatistics";
->>>>>>> 32828fa07c53bad885685dd4fa2a1a7e32952ed7
+import { PageNutritio } from "./PageNutritio/PageNutritio";
 
-export { PageCategory, PageHome, PageProHome, PageProfile, PageProfileNotifications, PageProfileStatistics }
+export {
+  PageCategory,
+  PageProfile,
+  PageProfileNotifications,
+  PageProfileStatistics,
+  PageProLanding,
+  PageBuy,
+  LandingPage,
+  PageNutritio,
+};

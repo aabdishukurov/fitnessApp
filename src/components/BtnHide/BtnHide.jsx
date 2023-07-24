@@ -1,7 +1,6 @@
-
 import React from "react";
-import hideIcon from "../../assets/categories/hide-icon.svg";
-import eyeSolid from "../../assets/categories/eye-solid.svg";
+import hideIcon from "../../assets/register/hide-icon.svg";
+import eyeSolid from "../../assets/register/eye-solid.svg";
 import styles from "./BtnHide.module.scss";
 const BtnHide = ({ isType, showBtn }) => {
   return (

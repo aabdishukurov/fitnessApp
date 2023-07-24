@@ -1,13 +1,17 @@
 @import "../../styles/index.scss";
 .registerBtn {
   @include fz20;
-  padding: 10px 15px;
+  padding: 12px 15px;
   text-align: center;
   border: none;
   border-radius: 20px;
+  transition: all 0.9s;
   cursor: pointer;
   color: #ffffff;
-  background: linear-gradient(90deg, #0164e7 2.94%, #019cf4 105.65%);
+  background: $gradient-blue;
+  &:hover {
+    box-shadow: 0px 0px 20px 0px #0164e7;
+  }
 }
 .btnEnter {
   @include fz20;

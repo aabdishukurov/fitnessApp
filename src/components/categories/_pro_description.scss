@@ -1,0 +1,128 @@
+﻿.main-page-divider {
+    width: 100vw;
+    height: 50px;
+}
+
+.pro-decription-pg-title {
+    width: 379px;
+    height: 85px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    margin: auto;
+    border-left: solid 1px #0164E7;
+    border-right: solid 1px #0164E7;
+    margin-bottom: 37px;
+
+    h4 {
+        color: $blue;
+        font-size: 45px;
+        width: 201px;
+        height: 55px;
+    }
+
+    img {
+        width: 128px;
+        height: 45px;
+    }
+}
+
+.pro-description-body {
+    margin: 0 auto 102px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 1234px;
+    height: 360px;
+    text-align: left;
+
+    p {
+        width: 1234px;
+        font-size: 25px;
+        font-weight: 400;
+        line-height: 40px;
+
+        .text-1st-word {
+            font-weight: 700;
+            font-size: 25px;
+            color: $blue;
+        }
+
+        .text-2st-word {
+            font-weight: 700;
+            font-size: 25px;
+            color: #FD6815;
+        }
+    }
+}
+
+.subscription-cards {
+    width: 1202px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 auto 79px;
+
+    .subscription-card {
+        padding: 10px 0px 32px 0px;
+        width: 359px;
+        border-radius: 30px;
+        background-color: #FD6815;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .subscription-card-title {
+        font-size: 25px;
+        color: #FFFFFF;
+        margin: 10px 0 40px;
+
+        .title-FitBreak {
+            font-weight: 700;
+        }
+
+        .title-type {
+            font-weight: 400;
+        }
+    }
+
+    ul {
+        width: 339px;
+        align-items: center;
+        padding-left: 30px;
+
+        li {
+            list-style-image: url('../../assets/pro_description/listContentAccessable.png');
+            color: #FFFFFF;
+            margin-bottom: 8px;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 40px;
+            padding-left: 21.56px;
+        }
+
+    }
+
+    button {
+        width: 278px;
+        height: 60px;
+        background-color: #FFFFFF;
+        color: #FD6815;
+        font-weight: 700;
+        font-size: 25px;
+        border-radius: 20px;
+        border: none;
+        margin: 40px 0 32px;
+
+        &:hover {
+            color: $white;
+            background-color: #FD6815;
+            border: 3px solid $white;
+        }
+    }
+
+}

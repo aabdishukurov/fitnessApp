@@ -1,0 +1,65 @@
+@import "../../styles/variables.scss";
+
+.nutritio {
+  background: #e2f5fd;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  gap: 80px;
+  padding: 15px 34px;
+  margin-bottom: 30px;
+}
+.image {
+  width: 250px;
+  height: 250px;
+  border: 2px solid $dark-blue;
+  border-radius: 50%;
+}
+.info {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 60px;
+  margin-bottom: 30px;
+}
+.name {
+  color: $dark-blue;
+  font-weight: 700;
+  font-size: 35px;
+  line-height: 43px;
+}
+.age {
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 30px;
+}
+.details {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.detail {
+  font-size: 25px;
+  line-height: 30px;
+  b {
+    font-weight: 600;
+  }
+}
+.raiting {
+  font-size: 20px;
+  line-height: 24px;
+}
+.stars {
+  margin-top: 15px;
+  display: flex;
+  gap: 5px;
+  margin-bottom: 23px;
+}
+.star {
+  width: 40px;
+  height: 40px;
+}
+.button {
+  padding: 18px 80px;
+}

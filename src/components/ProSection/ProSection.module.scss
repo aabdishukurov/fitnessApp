@@ -1,0 +1,50 @@
+@import "../../styles/variables";
+
+.container {
+  max-width: 1240px;
+  margin: 0 auto;
+}
+
+.pro {
+  margin-top: 40px;
+  margin-bottom: 174px;
+  &__content {
+    display: flex;
+    flex-direction: column;
+  }
+  &__logo {
+    padding: 15px 25px 15px 15px;
+    border: 1px solid $dark-blue;
+    border-top: none;
+    border-bottom: none;
+    margin: 0 auto 100px;
+    align-self: center;
+  }
+  &__text {
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 40px;
+    margin-bottom: 53px;
+  }
+  &__paragraph {
+    margin-bottom: 55px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  &__accent {
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 40px;
+    color: $dark-blue;
+    & > span {
+      color: $orange;
+    }
+  }
+  &__cards {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 60px;
+  }
+}

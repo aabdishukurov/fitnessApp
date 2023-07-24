@@ -1,0 +1,17 @@
+@import "../../styles/variables";
+
+.hero {
+  height: 605px;
+  background-image: url("../../assets/proHeroBG.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding-left: 100px;
+  padding-top: 80px;
+  margin-bottom: 140px;
+}
+.welcome {
+  font-size: 50px;
+  color: $dark-blue;
+  margin-bottom: 42px;
+}

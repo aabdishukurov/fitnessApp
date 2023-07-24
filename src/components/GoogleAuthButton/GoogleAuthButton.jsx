@@ -1,27 +1,31 @@
-import React from "react";
-import { useDispatch } from "react-redux";
-import { googleLogin } from "../../store/slices/authSlice";
-import googleIcon from "../../assets/categories/google-icon.svg";
+import React, { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import googleIcon from "../../assets/register/google-icon.svg";
 import styles from "./GoogleAuthButton.module.scss";
-import { useGoogleLogin } from "@react-oauth/google";
+import { useNavigate } from "react-router-dom";
+import { googleLogin } from "../../store/slices/authUser";
 
 function GoogleAuthButton() {
+  const { isAuthenticated } = useSelector((state) => state.auth);
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
-  const handleGoogleResponse = useGoogleLogin({
-    onSuccess: (res) => {
-      const { access_token } = res;
-      console.log(res);
-      dispatch(googleLogin(access_token));
-    },
-  });
+  useEffect(() => {
+    if (isAuthenticated) {
+      navigate("/");
+    }
+  }, [isAuthenticated, navigate]);
+
+  const signInWithGoogle = () => {
+    dispatch(googleLogin());
+  };
 
   return (
     <>
       <button
         className={styles.btnAuth}
         type="button"
-        onClick={handleGoogleResponse}
+        onClick={signInWithGoogle}
       >
         <img src={googleIcon} alt="google icon" />
         Войти через Google

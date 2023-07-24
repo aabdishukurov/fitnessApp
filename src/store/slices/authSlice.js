@@ -1,12 +1,20 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import api from "./api/apiUsers";
+import api from "../../api/apiUsers";
 import Cookies from "js-cookie";
 
 export const registerUser = createAsyncThunk(
   "auth/registerUser",
   async (userData) => {
     try {
-      const response = await api.post("users", userData);
+      const response = await api.post(
+        "/users/register",
+        JSON.stringify(userData),
+        {
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      );
       return response; //Ответом должен получить JWT token
     } catch (error) {
       throw error.response.data;
@@ -18,8 +26,16 @@ export const loginUser = createAsyncThunk(
   "auth/loginUser",
   async (userData) => {
     try {
-      const response = await api.post("/login", userData);
-      return response.data;
+      const response = await api.post(
+        "/users/login",
+        JSON.stringify(userData),
+        {
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      );
+      return response;
     } catch (error) {
       throw error.response.data;
     }
@@ -30,7 +46,7 @@ export const googleLogin = createAsyncThunk(
   "auth/googleLogin",
   async (accessToken) => {
     try {
-      const response = await api.post("/google-login", { accessToken });
+      const response = await api.post("users/register", { accessToken });
       return response.data;
     } catch (error) {
       throw error.response.data;
@@ -66,7 +82,6 @@ const authSlice = createSlice({
       .addCase(registerUser.fulfilled, (state, action) => {
         state.isLoading = false;
         state.isAuthenticated = true;
-
         state.user = action.payload;
       })
       .addCase(registerUser.rejected, (state, action) => {
@@ -80,13 +95,13 @@ const authSlice = createSlice({
       .addCase(loginUser.fulfilled, (state, action) => {
         state.isLoading = false;
         state.isAuthenticated = true;
-        state.user = action.payload.user;
+        state.user = action.payload;
         state.token = action.payload.token;
         Cookies.set("token", action.payload.token);
       })
       .addCase(loginUser.rejected, (state, action) => {
         state.isLoading = false;
-        state.error = action.error.message;
+        state.error = action.error;
       })
       // .addCase(logoutUser.pending, (state) => {
       //   state.isLoading = true;

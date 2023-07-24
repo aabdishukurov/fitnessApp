@@ -1,4 +1,3 @@
-
 @import "../../styles/index.scss";
 .formLogin {
   position: absolute;
@@ -14,6 +13,21 @@
   padding: 20px 10px;
   border-radius: 20px;
   background: #ffffff;
+  span {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 15px;
+    margin-bottom: 20px;
+    color: #e70101;
+    img {
+      width: 30px;
+    }
+  }
   &__reset {
     display: flex;
     align-items: center;
@@ -72,17 +86,6 @@
     justify-content: center;
     @include fz16;
     color: $secondary-color;
-    span {
-      position: absolute;
-      top: 55px;
-      z-index: 10;
-      font-family: "Montserrat";
-      font-style: normal;
-      font-weight: 400;
-      font-size: 12px;
-      line-height: 15px;
-      color: #e70101;
-    }
   }
   &__wrapperBtns {
     display: flex;

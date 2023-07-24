@@ -1,0 +1,100 @@
+@import "../../styles/index.scss";
+
+
+.exerContent{
+    width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    h2 {
+        text-transform: uppercase;
+        display: flex;
+        align-items: center;
+        font-size: 40px;
+        font-weight: 700;
+        font-family: "Montserrat";
+        line-height: 49px;
+        &:first-child {
+            justify-content: center;
+            margin-top: 100px;
+        }
+        &:nth-child(2){
+            margin: 45px 0;
+        }
+        &.logo {
+            background: $gradient-blue;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-size: 45px;
+            line-height: 55px;
+        } 
+        b {
+            text-transform: lowercase;
+            font-size: 30px;
+            line-height: 36px;
+            text-align: center;
+
+        }
+    }
+    .line {
+        display: block;
+        width: 2px;
+        height: 70px;
+        background: $gradient-blue;
+        &:nth-child(odd){
+            margin-right: 20px;
+        }
+        &:nth-child(2){
+            margin-left: 20px;
+        }
+    }
+    .exPage{
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        margin: 0 5px;
+        background-image: url("../../assets/categories/timer.png");
+        background-size: 100%;
+    }
+    
+    .exerTimer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        
+    }
+    .exShow {
+        display: flex;
+        width: 400px;
+        height: 310px;
+        background-image: url("../../assets//exercises/eyes.png");
+        background-size: 100%;
+    }
+    .cons {
+        background-color: rgba(47, 200, 248, 0.18);
+        box-sizing: border-box;
+        padding: 5px 10px;
+        border-radius: 15px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex: 1 2 auto;
+        p {
+            font-size: 20px;
+            line-height: 30px;
+            font-weight: 400;
+        }
+        span {
+            display: inline-block;
+            min-width: 45px;
+            min-height: 45px;
+            background-image: url("../../assets/exercises/idea.svg");
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+    }
+    p {
+        font-size: 25px;
+        line-height: 50px;
+        font-weight: 400;
+    }
+}
