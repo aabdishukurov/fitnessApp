@@ -43,15 +43,24 @@ const Timer = () => {
     return (
         <div className='container'>
             <div className={styles.timerComponent}>
+
+                {/* Timer Buttons */}
+
+            <div className={styles.buttons}>
+                    <button onClick={handleStart}
+                        className={styles.timerButton} >Старт</button>
+                    <button onClick={handleStop}
+                        className={styles.timerButton} >Пауза</button>
+                    <button onClick={handleReset}
+                        className={styles.timerButton} >Рестарт</button>
+                </div>
+                
+                {/* Timer nums */}
+
                 <div className={styles.timer}>
                     <span>{minutes}</span>
                     <span>:</span>
                     <span>{seconds}</span>
-                </div>
-                <div className={styles.buttons}>
-                    <button onClick={handleStart}>Start</button>
-                    <button onClick={handleStop}>Stop</button>
-                    <button onClick={handleReset}>Reset</button>
                 </div>
             </div>
         </div>
